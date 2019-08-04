@@ -102,7 +102,11 @@
 <meta property="og:description" content="What Is the InternetA Nuts-and-Bolts DescriptionThe Internet is a computer network that interconnects billions of computing devices throughout the world. All of these devices are called hosts or end s">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5mwucoqkqj30op13ktjl.jpg">
-<meta property="og:updated_time" content="2019-08-03T16:08:05.250Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5nxzvg9gsj30rk0bljuj.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5ny0tbmyjj30w30evwhi.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5ny24c8dsj30rj0bodhv.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5ny45mcuzj30pp0cjgnt.jpg">
+<meta property="og:updated_time" content="2019-08-04T13:04:34.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter1 Computer Networks and the Internet">
 <meta name="twitter:description" content="What Is the InternetA Nuts-and-Bolts DescriptionThe Internet is a computer network that interconnects billions of computing devices throughout the world. All of these devices are called hosts or end s">
@@ -356,7 +360,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-04T00:08:05+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-04T21:04:34+08:00">
                 2019-08-04
               </time>
             
@@ -421,8 +425,33 @@
 <p>End systems access the Internet through <strong>Internet Service Providers (ISPs)</strong>.</p>
 <p><strong>Protocols</strong> control the sending and receiving of information within the Internet. The <strong>Transmission Control Protocol(TCP)</strong> and the <strong>Internet Control Protocol(TCP)</strong> are two of the most important protocols in the Internet. </p>
 <p><strong>Internet standards</strong> are developed by the Internet Engineering Task Force(IETF). The IETF standards documents are called <strong>request for comments(RFCs)</strong>.</p>
-<!-- ### A Services Description -->
-
+<h3 id="A-Services-Description"><a href="#A-Services-Description" class="headerlink" title="A Services Description"></a>A Services Description</h3><p>The applications that Internet provides services to are said to be <strong>distributed applications</strong>, since they involve multiple end systems that exchange data with each other.</p>
+<p><strong>Socket interface</strong> specifies how a program running on one end system asks the Internet infrastructure to deliver data to a specific destination program running on another end system.</p>
+<h3 id="What-Is-a-Protocol"><a href="#What-Is-a-Protocol" class="headerlink" title="What Is a Protocol?"></a>What Is a Protocol?</h3><p>A <strong>protocol</strong> defines the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event.</p>
+<h2 id="The-Network-Edge"><a href="#The-Network-Edge" class="headerlink" title="The Network Edge"></a>The Network Edge</h2><p>Hosts are sometimes further divided into two categories: <strong>clients</strong> and <strong>servers</strong>.</p>
+<h3 id="Access-Networks"><a href="#Access-Networks" class="headerlink" title="Access Networks"></a>Access Networks</h3><p>The access network is the network that physically connects and end system to the first router(also known as the “edge router”).</p>
+<h4 id="Home-Access"><a href="#Home-Access" class="headerlink" title="Home Access"></a>Home Access</h4><p>Today, the two most prevalent types of broadband residential access are <strong>digital subscriber line(DSL)</strong> and <strong>cable</strong>.</p>
+<p><img src="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5nxzvg9gsj30rk0bljuj.jpg" alt="DSL Internet access"></p>
+<p>For the <strong>DSL Internet access</strong>, the residential telephone line carries both data and traditional telephone signals simultaneously, which are encoded at different frequencies:</p>
+<ul>
+<li>A high-speed downstream channel, in the 50 kHz to 1MHz band</li>
+<li>A medium-speed upstream channel, in the 4 kHz to 50 kHz band</li>
+<li>An ordinary two-way telephone channel, in the 0 to 4 kHz band</li>
+</ul>
+<p>The DSL standards define multiple transmisson rates, including 55 Mbps downstream and 15 Mbps upstream[ITU 2006]. The access is said to be <em>asymmetric</em>.</p>
+<p><img src="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5ny0tbmyjj30w30evwhi.jpg" alt="A hybrid fiber-coaxial access network"></p>
+<p>While DSL makes use of telco’s exsiting local telephone infrastructure, <strong>cable Interet access</strong> makes use of the cable television company’s existing cable television infrastructure. </p>
+<p>The cable Internet access is typically asymmetric, with downstream channel typically allocated a higher transmission rate than the upstream channel. The DOCSIS 2.0 standard defines downstream rates up to 42.8 Mbps and upstream rates of up to 30.7 Mbps.</p>
+<p><img src="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5ny24c8dsj30rj0bodhv.jpg" alt="FTTH Internet access"></p>
+<p>An up-and-coming technology that provides even higher speeds is <strong>fiber to the home(FTTH)</strong>. The FTTP concept is simple–provide an optical fiber path from the CO directly to the home.</p>
+<p>This image shows FTTH using the <strong>passive optical network(PON)</strong> distribution architecture. Each home has an optical network terminator(ONT), which is connected by dedicated optical fiber to a neighborhood splitter. The splitter combines a number of homes onto a single, shared optical fiber, which connects to an optical line terminator(OLT) in the telco’s CO. The OLT, providing conversion between optical and electrical signals, connects to the Internet via a teleco router.</p>
+<p>In locations where DSL, cable, and FTTH are not available, a <strong>satellite link</strong> can be used to connect a residence to the Internet at speeds of more than 1 Mbps. <strong>Dial-up access</strong> over traditional phone lines is based on the same model as DSL–a home modem connects over a phone line to a modem in the ISP. Dial-up access is excruciatingly slow at 56 kbps.</p>
+<h4 id="Access-in-the-Enterprise-and-the-Home-Ethernet-and-WiFi"><a href="#Access-in-the-Enterprise-and-the-Home-Ethernet-and-WiFi" class="headerlink" title="Access in the Enterprise (and the Home): Ethernet and WiFi"></a>Access in the Enterprise (and the Home): Ethernet and WiFi</h4><p><img src="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5ny45mcuzj30pp0cjgnt.jpg" alt="Ethernet Internet access"></p>
+<p>On corporate and university campuses, and increasingly in home settings, a <strong>local area networ(LAN)</strong> is used to connect an end system to the edge router. <strong>Ethernet</strong> is by far the most prevalent access technology in many types of LAN technologis.</p>
+<p>With Ethernet access, users typically have 100 Mbps or 1Gbps access to the Ethernet switch, whereas servers may have 1 Gbps or even 10 Gbps access.</p>
+<p>Wireless LAN access based on <strong>IEEE 802.11 technology</strong>, more colloquially known as <strong>WiFi</strong>, is now everywhere. 802.11 today privides a shared transmission rate of up to more than 100 Mbps.</p>
+<h4 id="Wide-Area-Wireless-Access-3G-and-LTE"><a href="#Wide-Area-Wireless-Access-3G-and-LTE" class="headerlink" title="Wide-Area Wireless Access: 3G and LTE"></a>Wide-Area Wireless Access: 3G and LTE</h4><p>Devices like smartphones employ the same wireless infrastructure used for cellular telephony to send/receive packets through a base station that is operated by the <strong>cellular network</strong> provider.</p>
+<!-- ### Physical Media -->
       
     </div>
     
@@ -627,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-Is-the-Internet"><span class="nav-number">1.</span> <span class="nav-text">What Is the Internet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Nuts-and-Bolts-Description"><span class="nav-number">1.1.</span> <span class="nav-text">A Nuts-and-Bolts Description</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#What-Is-the-Internet"><span class="nav-number">1.</span> <span class="nav-text">What Is the Internet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Nuts-and-Bolts-Description"><span class="nav-number">1.1.</span> <span class="nav-text">A Nuts-and-Bolts Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#A-Services-Description"><span class="nav-number">1.2.</span> <span class="nav-text">A Services Description</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#What-Is-a-Protocol"><span class="nav-number">1.3.</span> <span class="nav-text">What Is a Protocol?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Network-Edge"><span class="nav-number">2.</span> <span class="nav-text">The Network Edge</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Access-Networks"><span class="nav-number">2.1.</span> <span class="nav-text">Access Networks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Home-Access"><span class="nav-number">2.1.1.</span> <span class="nav-text">Home Access</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Access-in-the-Enterprise-and-the-Home-Ethernet-and-WiFi"><span class="nav-number">2.1.2.</span> <span class="nav-text">Access in the Enterprise (and the Home): Ethernet and WiFi</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Wide-Area-Wireless-Access-3G-and-LTE"><span class="nav-number">2.1.3.</span> <span class="nav-text">Wide-Area Wireless Access: 3G and LTE</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
