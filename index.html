@@ -356,8 +356,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-05T22:18:01+08:00">
-                2019-08-05
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-06T03:01:00+08:00">
+                2019-08-06
               </time>
             
           </span>
@@ -427,7 +427,8 @@
 <p><strong>Socket interface</strong> specifies how a program running on one end system asks the Internet infrastructure to deliver data to a specific destination program running on another end system.</p>
 <h3 id="What-Is-a-Protocol"><a href="#What-Is-a-Protocol" class="headerlink" title="What Is a Protocol?"></a>What Is a Protocol?</h3><p>A <strong>protocol</strong> defines the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event.</p>
 <h2 id="The-Network-Edge"><a href="#The-Network-Edge" class="headerlink" title="The Network Edge"></a>The Network Edge</h2><p>Hosts are sometimes further divided into two categories: <strong>clients</strong> and <strong>servers</strong>.</p>
-<h3 id="Access-Networks"><a href="#Access-Networks" class="headerlink" title="Access Networks"></a>Access Networks</h3><p>The access network is the network that physically connects and end system to the first router(also known as the “edge router”).</p>
+<h3 id="Access-Networks"><a href="#Access-Networks" class="headerlink" title="Access Networks"></a>Access Networks</h3><p><img src="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5p6483qjej30qe0yaqcy.jpg" alt="Access Networks"></p>
+<p>The access network is the network that physically connects and end system to the first router(also known as the “edge router”).</p>
 <h4 id="Home-Access"><a href="#Home-Access" class="headerlink" title="Home Access"></a>Home Access</h4><p>Today, the two most prevalent types of broadband residential access are <strong>digital subscriber line(DSL)</strong> and <strong>cable</strong>.</p>
 <p><img src="https://ws1.sinaimg.cn/mw690/007l0Ujfly1g5nxzvg9gsj30rk0bljuj.jpg" alt="DSL Internet access"></p>
 <p>For the <strong>DSL Internet access</strong>, the residential telephone line carries both data and traditional telephone signals simultaneously, which are encoded at different frequencies:</p>
@@ -458,6 +459,10 @@
 <h4 id="Fiber-Optics"><a href="#Fiber-Optics" class="headerlink" title="Fiber Optics"></a>Fiber Optics</h4><p>An optical fiber is a thin, flexiable medium that conducts pulses of light, with each pulse representing a bit. A single optical fiber can support tremendous bit rates, up to tens of even hundreds of gigabits per second. They are immune to electromagnetic interference.</p>
 <h4 id="Terrestrial-Radio-Channels"><a href="#Terrestrial-Radio-Channels" class="headerlink" title="Terrestrial Radio Channels"></a>Terrestrial Radio Channels</h4><p>They require no physical wire to be installed.</p>
 <h4 id="Satellite-Radio-Channels"><a href="#Satellite-Radio-Channels" class="headerlink" title="Satellite Radio Channels"></a>Satellite Radio Channels</h4><p>The communication satellite receives transmissions on one frequency band, regenerates the signal using a repeater, and transmits the signal on another frequency.</p>
+<h2 id="The-Network-Core"><a href="#The-Network-Core" class="headerlink" title="The Network Core"></a>The Network Core</h2><p><img src="../uploads/the_network_core.jpg" alt="The network core"></p>
+<h3 id="Packet-Switching"><a href="#Packet-Switching" class="headerlink" title="Packet Switching"></a>Packet Switching</h3><p>In a network application, end systems exchange <strong>messages</strong> with each other.<br>To send message from a source end system to a destination end system, the source breaks long messages into smaller chunks of data known as <strong>packets</strong>. Between source and destination, each packet travels through communication links and <strong>packet switches</strong>(two predominant types, <strong>routers</strong> and <strong>link-layer switches</strong>).</p>
+<h4 id="Store-and-Forward-Transmission"><a href="#Store-and-Forward-Transmission" class="headerlink" title="Store-and-Forward Transmission"></a>Store-and-Forward Transmission</h4><p>Most packet switches use <strong>store-and-forward transmission</strong> at the inputs to the links. It means that <em>the packet switch must receive the entire packet before it can begin to transmit the first bit of the packet onto the outbound link.</em></p>
+<h4 id="Queuing-Delays-and-Packet-Loss"><a href="#Queuing-Delays-and-Packet-Loss" class="headerlink" title="Queuing Delays and Packet Loss"></a>Queuing Delays and Packet Loss</h4><p>Each packet switch has multiple links attached to it. For each attached link, the packet switch has an <strong>output buffer</strong>(also called an <strong>output queue</strong>), which stores packets that the router is about to send into the link. Due to this, packets suffer output buffer <strong>queuing delays</strong>.</p>
 
           
         
