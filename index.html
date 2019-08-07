@@ -356,8 +356,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-06T03:22:43+08:00">
-                2019-08-06
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-07T08:01:49+08:00">
+                2019-08-07
               </time>
             
           </span>
@@ -414,57 +414,15 @@
       
         
           
-            <h2 id="What-Is-the-Internet"><a href="#What-Is-the-Internet" class="headerlink" title="What Is the Internet"></a>What Is the Internet</h2><h3 id="A-Nuts-and-Bolts-Description"><a href="#A-Nuts-and-Bolts-Description" class="headerlink" title="A Nuts-and-Bolts Description"></a>A Nuts-and-Bolts Description</h3><p>The Internet is a computer network that interconnects billions of <strong>computing devices</strong> throughout the world.</p>
-<p>All of these devices are called <strong>hosts</strong> or <strong>end systems</strong>.<br><img src="../images/1_1.jpg" alt="Some pieces of the Internet"><br>End systems are connected together by a network of <strong>communication links</strong> and <strong>packet switches.</strong></p>
-<p><strong>Transmission rate</strong> is measured in bits/second.</p>
-<p>When one end system has data to send to another end system, the sending end system segments the data and adds header bytes to each segment. The resulting packages of information is known as <strong>packets</strong>.</p>
-<p>The two most prominent types in today’s Internet are <strong>routers</strong> and <strong>link-layer switches</strong>.</p>
-<p>The sequence of communication links and packet switches traversed by a packet from the sending end system to the receiving end system is known as a <strong>route</strong> or <strong>path</strong> through the network.</p>
-<p>End systems access the Internet through <strong>Internet Service Providers (ISPs)</strong>.</p>
-<p><strong>Protocols</strong> control the sending and receiving of information within the Internet. The <strong>Transmission Control Protocol(TCP)</strong> and the <strong>Internet Control Protocol(TCP)</strong> are two of the most important protocols in the Internet. </p>
-<p><strong>Internet standards</strong> are developed by the Internet Engineering Task Force(IETF). The IETF standards documents are called <strong>request for comments(RFCs)</strong>.</p>
-<h3 id="A-Services-Description"><a href="#A-Services-Description" class="headerlink" title="A Services Description"></a>A Services Description</h3><p>The applications that Internet provides services to are said to be <strong>distributed applications</strong>, since they involve multiple end systems that exchange data with each other.</p>
-<p><strong>Socket interface</strong> specifies how a program running on one end system asks the Internet infrastructure to deliver data to a specific destination program running on another end system.</p>
-<h3 id="What-Is-a-Protocol"><a href="#What-Is-a-Protocol" class="headerlink" title="What Is a Protocol?"></a>What Is a Protocol?</h3><p>A <strong>protocol</strong> defines the format and the order of messages exchanged between two or more communicating entities, as well as the actions taken on the transmission and/or receipt of a message or other event.</p>
-<h2 id="The-Network-Edge"><a href="#The-Network-Edge" class="headerlink" title="The Network Edge"></a>The Network Edge</h2><p>Hosts are sometimes further divided into two categories: <strong>clients</strong> and <strong>servers</strong>.</p>
-<h3 id="Access-Networks"><a href="#Access-Networks" class="headerlink" title="Access Networks"></a>Access Networks</h3><p><img src="../images/computer_networking/1_4.jpg" alt="Access Networks"></p>
-<p>The access network is the network that physically connects and end system to the first router(also known as the “edge router”).</p>
-<h4 id="Home-Access"><a href="#Home-Access" class="headerlink" title="Home Access"></a>Home Access</h4><p>Today, the two most prevalent types of broadband residential access are <strong>digital subscriber line(DSL)</strong> and <strong>cable</strong>.</p>
-<p><img src="../images/computer_networking/1_5.jpg" alt="DSL Internet access"></p>
-<p>For the <strong>DSL Internet access</strong>, the residential telephone line carries both data and traditional telephone signals simultaneously, which are encoded at different frequencies:</p>
-<ul>
-<li>A high-speed downstream channel, in the 50 kHz to 1MHz band</li>
-<li>A medium-speed upstream channel, in the 4 kHz to 50 kHz band</li>
-<li>An ordinary two-way telephone channel, in the 0 to 4 kHz band</li>
-</ul>
-<p>The DSL standards define multiple transmisson rates, including 55 Mbps downstream and 15 Mbps upstream[ITU 2006]. The access is said to be <em>asymmetric</em>.</p>
-<p><img src="../images/computer_networking/1_6.jpg" alt="A hybrid fiber-coaxial access network"></p>
-<p>While DSL makes use of telco’s exsiting local telephone infrastructure, <strong>cable Interet access</strong> makes use of the cable television company’s existing cable television infrastructure. </p>
-<p>The cable Internet access is typically asymmetric, with downstream channel typically allocated a higher transmission rate than the upstream channel. The DOCSIS 2.0 standard defines downstream rates up to 42.8 Mbps and upstream rates of up to 30.7 Mbps.</p>
-<p><img src="../images/computer_networking/1_7.jpg" alt="FTTH Internet access"></p>
-<p>An up-and-coming technology that provides even higher speeds is <strong>fiber to the home(FTTH)</strong>. The FTTP concept is simple–provide an optical fiber path from the CO directly to the home.</p>
-<p>This image shows FTTH using the <strong>passive optical network(PON)</strong> distribution architecture. Each home has an optical network terminator(ONT), which is connected by dedicated optical fiber to a neighborhood splitter. The splitter combines a number of homes onto a single, shared optical fiber, which connects to an optical line terminator(OLT) in the telco’s CO. The OLT, providing conversion between optical and electrical signals, connects to the Internet via a teleco router.</p>
-<p>In locations where DSL, cable, and FTTH are not available, a <strong>satellite link</strong> can be used to connect a residence to the Internet at speeds of more than 1 Mbps. <strong>Dial-up access</strong> over traditional phone lines is based on the same model as DSL–a home modem connects over a phone line to a modem in the ISP. Dial-up access is excruciatingly slow at 56 kbps.</p>
-<h4 id="Access-in-the-Enterprise-and-the-Home-Ethernet-and-WiFi"><a href="#Access-in-the-Enterprise-and-the-Home-Ethernet-and-WiFi" class="headerlink" title="Access in the Enterprise (and the Home): Ethernet and WiFi"></a>Access in the Enterprise (and the Home): Ethernet and WiFi</h4><p><img src="../images/computer_networking/1_8.jpg" alt="Ethernet Internet access"></p>
-<p>On corporate and university campuses, and increasingly in home settings, a <strong>local area networ(LAN)</strong> is used to connect an end system to the edge router. <strong>Ethernet</strong> is by far the most prevalent access technology in many types of LAN technologis.</p>
-<p>With Ethernet access, users typically have 100 Mbps or 1Gbps access to the Ethernet switch, whereas servers may have 1 Gbps or even 10 Gbps access.</p>
-<p>Wireless LAN access based on <strong>IEEE 802.11 technology</strong>, more colloquially known as <strong>WiFi</strong>, is now everywhere. 802.11 today privides a shared transmission rate of up to more than 100 Mbps.</p>
-<h4 id="Wide-Area-Wireless-Access-3G-and-LTE"><a href="#Wide-Area-Wireless-Access-3G-and-LTE" class="headerlink" title="Wide-Area Wireless Access: 3G and LTE"></a>Wide-Area Wireless Access: 3G and LTE</h4><p>Devices like smartphones employ the same wireless infrastructure used for cellular telephony to send/receive packets through a base station that is operated by the <strong>cellular network</strong> provider.</p>
-<h3 id="Physical-Media"><a href="#Physical-Media" class="headerlink" title="Physical Media"></a>Physical Media</h3><p>For each transmitter-receiver pair, a bit is sent by propagating elecrtomagnetic waves or optical pulses across a <strong>physical medium</strong>.</p>
-<p>Physical medium fall into two categories: <strong>guided media</strong> and <strong>unguided media</strong>. With guided media, the waves are guided along a solid medium, such as a fiber-optic cable, a twisted-pair copper wire, or a coaxial cable. With unguided media, the waves propagate in the atmosphere and in outer space, such as in a wireless LAN or a digital satellite channel.</p>
-<h4 id="Twisted-Pair-Copper-Wire"><a href="#Twisted-Pair-Copper-Wire" class="headerlink" title="Twisted-Pair Copper Wire"></a>Twisted-Pair Copper Wire</h4><p>The least expensive and most commonly used guided transmission medium.</p>
-<p><strong>Unshielded twisted pair(UTP)</strong> is commonly used for computer networks within a building, that is, for LANs. Data rates for LANs using twisted pair today range from 10 Mbps to 10 Gbps, which depend on the thickness of the wire and the distance between transmitter and receiver.</p>
-<h4 id="Coaxial-Cable"><a href="#Coaxial-Cable" class="headerlink" title="Coaxial Cable"></a>Coaxial Cable</h4><p>Like twisted pair coaxial cable consists of two copper conductors, but the two conductors are concentric rather than parallel, which can make coaxial cable achieve high data transmission rates.</p>
-<p>Coaxial cable can be used as a guided <strong>shared medium</strong>. </p>
-<h4 id="Fiber-Optics"><a href="#Fiber-Optics" class="headerlink" title="Fiber Optics"></a>Fiber Optics</h4><p>An optical fiber is a thin, flexiable medium that conducts pulses of light, with each pulse representing a bit. A single optical fiber can support tremendous bit rates, up to tens of even hundreds of gigabits per second. They are immune to electromagnetic interference.</p>
-<h4 id="Terrestrial-Radio-Channels"><a href="#Terrestrial-Radio-Channels" class="headerlink" title="Terrestrial Radio Channels"></a>Terrestrial Radio Channels</h4><p>They require no physical wire to be installed.</p>
-<h4 id="Satellite-Radio-Channels"><a href="#Satellite-Radio-Channels" class="headerlink" title="Satellite Radio Channels"></a>Satellite Radio Channels</h4><p>The communication satellite receives transmissions on one frequency band, regenerates the signal using a repeater, and transmits the signal on another frequency.</p>
-<h2 id="The-Network-Core"><a href="#The-Network-Core" class="headerlink" title="The Network Core"></a>The Network Core</h2><p><img src="../images/computer_networking/1_10.jpg" alt="The network core"></p>
-<h3 id="Packet-Switching"><a href="#Packet-Switching" class="headerlink" title="Packet Switching"></a>Packet Switching</h3><p>In a network application, end systems exchange <strong>messages</strong> with each other.<br>To send message from a source end system to a destination end system, the source breaks long messages into smaller chunks of data known as <strong>packets</strong>. Between source and destination, each packet travels through communication links and <strong>packet switches</strong>(two predominant types, <strong>routers</strong> and <strong>link-layer switches</strong>).</p>
-<h4 id="Store-and-Forward-Transmission"><a href="#Store-and-Forward-Transmission" class="headerlink" title="Store-and-Forward Transmission"></a>Store-and-Forward Transmission</h4><p>Most packet switches use <strong>store-and-forward transmission</strong> at the inputs to the links. It means that <em>the packet switch must receive the entire packet before it can begin to transmit the first bit of the packet onto the outbound link.</em></p>
-<h4 id="Queuing-Delays-and-Packet-Loss"><a href="#Queuing-Delays-and-Packet-Loss" class="headerlink" title="Queuing Delays and Packet Loss"></a>Queuing Delays and Packet Loss</h4><p>Each packet switch has multiple links attached to it. For each attached link, the packet switch has an <strong>output buffer</strong>(also called an <strong>output queue</strong>), which stores packets that the router is about to send into the link. Due to this, packets suffer output buffer <strong>queuing delays</strong>.</p>
-
-          
+          What Is the InternetA Nuts-and-Bolts DescriptionThe Internet is a computer network that interconnects billions of computing devices throughout the wor
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/04/Chapter1-Computer-Networks-and-the-Internet/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -594,19 +552,15 @@
       
         
           
-            <p>这个月主要是呆在学校里面, 自己自学, 目标是Algorithms, 4th Edition by Robert Sedgewick和Computer Networking A Top-Down Approach, 7th Edition, 中间再穿插写leetcode. 重新看算法的目的一是重温一下数据结构和算法的基础知识, 以便刷leetcode题的时候不至于到处爬博客现学, 二是为了好好练练自己的Java代码的编写质量. 计网是新东西, 这本书好像同样也是用Java实现. 刷leetcode的题是为了将来在面试的时候不至于手足无措, 然后同时也是和詹蛋蛋约好的相互监督.</p>
-<p>对于所学的东西, 我尽量以博客的形式把他们记录下来, 相当于是做了笔记. 这篇文章主要起一个索引的作用, 也将实时更新.</p>
-<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><ul>
-<li><h3 id="有用的笔记"><a href="#有用的笔记" class="headerlink" title="有用的笔记"></a>有用的笔记</h3><a href="/2019/08/04/Chapter1-Computer-Networks-and-the-Internet/" title="Chapter1 Computer Networks and the Internet">Chapter1 Computer Networks and the Internet</a>
-
-</li>
-</ul>
-<h2 id="Leetcode题"><a href="#Leetcode题" class="headerlink" title="Leetcode题"></a>Leetcode题</h2><h2 id="算法与数据结构"><a href="#算法与数据结构" class="headerlink" title="算法与数据结构"></a>算法与数据结构</h2><ul>
-<li><h3 id="习题解答"><a href="#习题解答" class="headerlink" title="习题解答"></a><a href="https://github.com/SaltyFishL/Algorithms_4th" target="_blank" rel="noopener">习题解答</a></h3></li>
-<li><h3 id="有用的笔记-1"><a href="#有用的笔记-1" class="headerlink" title="有用的笔记"></a>有用的笔记</h3></li>
-</ul>
-
-          
+          这个月主要是呆在学校里面, 自己自学, 目标是Algorithms, 4th Edition by Robert Sedgewick和Computer Networking A Top-Down Approach, 7th Edition, 中间再穿插写leetcode. 重新看算法的目的一是重温一
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/02/2019-08/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -736,12 +690,15 @@
       
         
           
-            <p>在期末考试之前的那段日子里得知字节跳动要和学校联合搞一个Android的暑期课程, 本着闲着也是闲着的心态填了报名表. 训练从7月11号开始, 一直持续到8月22号. 对于我而言, Android是一个全新的东西, 所以说学起来并不是那么轻松. 两个星期的速成课每天都要接收大量的信息, 每天课后还有相应的实验需要完成. 尽管有点累, 总的来说还是很充实, 最后也顺利地和家祺完成了大作业的答辩.</p>
-<p>而现在已经是八月的第二天了, 昨天去参加了字节跳动的Android实习的面试. 结果挺惨淡, 被面试官问得心里发毛. 回来后的感觉说不上来是失落还是什么, 毕竟本来也确实是抱着不管怎样去面一下总不亏的想法, 不过确实感觉心里梗梗的, 准确来说就是焦虑吧.</p>
-<p>为什么会有这样的焦虑呢, 可能是因为理想与现实之间的巨大落差, 更可怕的是造成这种落差的根源就是自己. 回望这两年的大学生活, 除去那么几个时间点略微地为自己考虑和规划, 更多的是被推着迷茫地向前走. 对于专业课程, 大多只是流于表面, 而没有去深究. 现在想起来, 好像大学以来就没有细致地, 完整地读过任何一本书, 大多是人云亦云, 跟风从众, 三分热度, 半途而废. 老实说, 我是一个在自我管理方面做得很差的一个人, 特别是当没有一个明确的目标时, 往往会把大量的时间浪费在无意义的社交网络上, 窥探别人的生活, 荒废自己的日子.</p>
-<p>现在是大二结束的暑假, 好像是时候为自己未来的人生做做规划了. Android是一个有趣的东西, 在开发Android的过程中, 既能体验到前端设计的美, 又能和后端通信满足一点点控制欲. 总听到种一棵树, 最好的时机是十年前, 其次是现在. 为了在这个学期结束后的寒假找到一份满意的实习, 大概需要掌握数据结构与算法, 数据库, 操作系统, 汇编语言, 计算机网络, Android开发, Java特性等等的技能. 接下来的日子里就在这个博客里记录我的计划和学习吧.</p>
-
-          
+          在期末考试之前的那段日子里得知字节跳动要和学校联合搞一个Android的暑期课程, 本着闲着也是闲着的心态填了报名表. 训练从7月11号开始, 一直持续到8月22号. 对于我而言, Android是一个全新的东西, 所以说学起来并不是那么轻松. 两个星期的速成课每天都要接收大量的信息, 每天课后还有
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/08/02/我为什么这么焦虑/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
