@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="LeetCode,Java,Algorithms,stack,">
 
 
 
@@ -93,17 +93,20 @@
 
 
 
-<meta name="description" content="忘了多可惜">
-<meta name="keywords" content="北京理工大学 BIT 17级 学习中 Android Leetcode 移动开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+<meta name="description" content="42. 接雨水暴力解:思路:对于每个元素, 其能达到的最大高度为该元素左边所有元素中的最大值和右边所有元素中的最大值其中较小的那一个. 算法: 初始化res为0 便利整个height数组 初始化 leftMax = height[left], rightMax = height[right] 从当前元素向左扫描并更新leftMax 从当前元素向右扫描并更新rightMax 当左右最大元素值均比当前">
+<meta name="keywords" content="LeetCode,Java,Algorithms,stack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="#42 接雨水">
+<meta property="og:url" content="http://yoursite.com/2019/08/17/42-接雨水/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="忘了多可惜">
+<meta property="og:description" content="42. 接雨水暴力解:思路:对于每个元素, 其能达到的最大高度为该元素左边所有元素中的最大值和右边所有元素中的最大值其中较小的那一个. 算法: 初始化res为0 便利整个height数组 初始化 leftMax = height[left], rightMax = height[right] 从当前元素向左扫描并更新leftMax 从当前元素向右扫描并更新rightMax 当左右最大元素值均比当前">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20190819001908.jpg">
+<meta property="og:updated_time" content="2019-08-18T17:01:40.023Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SaltyFishL&#39;s 个人网站">
-<meta name="twitter:description" content="忘了多可惜">
+<meta name="twitter:title" content="#42 接雨水">
+<meta name="twitter:description" content="42. 接雨水暴力解:思路:对于每个元素, 其能达到的最大高度为该元素左边所有元素中的最大值和右边所有元素中的最大值其中较小的那一个. 算法: 初始化res为0 便利整个height数组 初始化 leftMax = height[left], rightMax = height[right] 从当前元素向左扫描并更新leftMax 从当前元素向右扫描并更新rightMax 当左右最大元素值均比当前">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20190819001908.jpg">
 
 
 
@@ -133,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/08/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/17/42-接雨水/">
 
 
 
 
 
-  <title>Archive | SaltyFishL's 个人网站</title>
+  <title>#42 接雨水 | SaltyFishL's 个人网站</title>
   
 
 
@@ -168,7 +171,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-archive">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -294,212 +297,271 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/17/42-接雨水/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junqi Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaltyFishL's 个人网站">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">#42 接雨水</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-17T22:40:42+08:00">
+                2019-08-17
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-19T01:01:40+08:00">
+                2019-08-19
+              </time>
+            
+          </span>
+
           
-        
-        Um..! 5 posts in total. Keep on posting.
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h2 id="42-接雨水"><a href="#42-接雨水" class="headerlink" title="42. 接雨水"></a><a href="https://leetcode-cn.com/problems/trapping-rain-water/" target="_blank" rel="noopener">42. 接雨水</a></h2><h3 id="暴力解"><a href="#暴力解" class="headerlink" title="暴力解:"></a>暴力解:</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>对于每个元素, 其能达到的最大高度为该元素左边所有元素中的最大值和右边所有元素中的最大值其中较小的那一个.</p>
+<h4 id="算法"><a href="#算法" class="headerlink" title="算法:"></a>算法:</h4><ul>
+<li>初始化<code>res</code>为0</li>
+<li>便利整个<code>height</code>数组<ul>
+<li>初始化 <code>leftMax = height[left]</code>, <code>rightMax = height[right]</code></li>
+<li>从当前元素向左扫描并更新<code>leftMax</code></li>
+<li>从当前元素向右扫描并更新<code>rightMax</code></li>
+<li><strong>当左右最大元素值均比当前元素值大时</strong>, <code>res += Math.min(leftMax, rightMax) - height[i];</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; height.length - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">int</span> left = i - <span class="number">1</span>, right = i + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> leftMax = height[left];</span><br><span class="line">        <span class="keyword">int</span> rightMax = height[right];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (left &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (leftMax &lt; height[left]) &#123;</span><br><span class="line">                leftMax = height[left];</span><br><span class="line">            &#125;</span><br><span class="line">            left--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (right &lt;= height.length - <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (rightMax &lt; height[right]) &#123;</span><br><span class="line">                rightMax = height[right];</span><br><span class="line">            &#125;</span><br><span class="line">            right++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (height[i] &lt; leftMax &amp;&amp; height[i] &lt; rightMax) &#123;</span><br><span class="line">            res += Math.min(leftMax, rightMax) - height[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度:"></a>复杂度:</h4><table>
+<thead>
+<tr>
+<th>执行用时</th>
+<th>内存消耗</th>
+<th>语言</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>152ms(5.4%)</td>
+<td>42MB(60.13%)</td>
+<td>Java</td>
+</tr>
+</tbody></table>
+<ul>
+<li>时间复杂度 $ O(n) $, 对于每个元素, 都要从扫描整个数组</li>
+<li>空间复杂度 $ O(1) $</li>
+</ul>
+<hr>
+<h3 id="应用栈"><a href="#应用栈" class="headerlink" title="应用栈:"></a>应用栈:</h3><h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路:"></a>思路:</h4><p>遍历数组时, 用栈来追踪可能储水的长条或作为”墙”的长条. 储水长条和”墙”长条的概念是相对的, 可以变动. 有水坑的必要条件是当前扫描到的长条作为”墙”长条, 栈中至少有一个储水长条和一个”墙”长条, 这样即可填平”一层”(“一层”的高可能超过1, 这里指的是一层或多层宽度相同的方块条叠起来). 层层填平后, 当前位置之前的所有水坑已填平(当作后面已经没有长条). 当前长条将作为新的储水长条或”墙”长条压入栈.</p>
+<p>当前长条的高度小于栈顶高度时, 将当前长条压入栈.<br>当前长条的高度大于或等于栈顶长条的高度时, 层层填平两个长条中间的部分, 并将当前长条压入栈.</p>
+<h4 id="算法-1"><a href="#算法-1" class="headerlink" title="算法:"></a>算法:</h4><ul>
+<li>使用栈<code>stack</code>来保存长条的<strong>索引</strong></li>
+<li>遍历数组<ul>
+<li>当栈不为空且当前元素的高度大于或等于栈顶元素的高度<ul>
+<li>弹出栈顶元素<code>topIndex</code>.</li>
+<li>若栈为空(意味着之前的坑全部填平, 且无论怎么填后面的坑都不会对之前的坑有影响), 跳出循环.</li>
+<li>计算要填的”一层”坑的宽度: <code>trapWidth = current - stack.peek() - 1</code>, 高度: <code>trapHeight = Math.min(height[current], height[stack.peek()]) - height(topIndex)</code>.</li>
+<li>填坑, <code>res += trapWidth * trapHeight</code>.</li>
+<li>重复以上操作.</li>
+</ul>
+</li>
+<li>将当前元素压入栈</li>
+</ul>
+</li>
+</ul>
+<h4 id="图示"><a href="#图示" class="headerlink" title="图示:"></a>图示:</h4><p><img src="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20190819001908.jpg" alt="应用栈的过程图"></p>
+<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码:"></a>代码:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">public</span> <span class="keyword">int</span> <span class="title">trap</span><span class="params">(<span class="keyword">int</span>[] height)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">    Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> current = <span class="number">0</span>; current &lt; height.length; current++) &#123;</span><br><span class="line">        <span class="keyword">while</span> (!stack.empty() &amp;&amp; height[current] &gt;= height[stack.peek()]) &#123;</span><br><span class="line">            <span class="keyword">int</span> topIndex = stack.pop();</span><br><span class="line">            <span class="keyword">if</span> (stack.empty()) &#123;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> trapWidth = current - stack.peek() - <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> trapHeight = Math.min(height[current], height[stack.peek()]) - height[topIndex];</span><br><span class="line">            res += trapWidth * trapHeight;</span><br><span class="line">        &#125;</span><br><span class="line">        stack.push(current);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="复杂度-1"><a href="#复杂度-1" class="headerlink" title="复杂度:"></a>复杂度:</h4><table>
+<thead>
+<tr>
+<th>执行用时</th>
+<th>内存消耗</th>
+<th>语言</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>15ms(19.33%)</td>
+<td>37.1MB(85.67%)</td>
+<td>Java</td>
+</tr>
+</tbody></table>
+<ul>
+<li>时间复杂度 $ O(n) $, 每个条形快最多访问两次, 即压入和弹出操作$ O(1) $.</li>
+<li>空间复杂度 $ O(n) $, 栈最多占用$ O(n) $的空间</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Algorithms/" rel="tag"># Algorithms</a>
+          
+            <a href="/tags/stack/" rel="tag"># stack</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
         
-        
+
         
 
         
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
           </div>
         
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/17/42-接雨水/" itemprop="url">
-              
-                <span itemprop="name">#42 接雨水</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-17T22:40:42+08:00" content="2019-08-17">
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        </div>
+      
       
 
-        
-        
-        
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/11/Homework-Problems-and-Questions-Chapter1/" rel="next" title="Homework Problems and Questions Chapter1">
+                <i class="fa fa-chevron-left"></i> Homework Problems and Questions Chapter1
+              </a>
+            
+          </div>
 
-        
-        
+          <span class="post-nav-divider"></span>
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/11/Homework-Problems-and-Questions-Chapter1/" itemprop="url">
-              
-                <span itemprop="name">Homework Problems and Questions Chapter1</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-11T06:18:40+08:00" content="2019-08-11">
-          08-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/04/Chapter1-Computer-Networks-and-the-Internet/" itemprop="url">
-              
-                <span itemprop="name">Chapter1 Computer Networks and the Internet</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-04T00:08:05+08:00" content="2019-08-04">
-          08-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/02/2019-08/" itemprop="url">
-              
-                <span itemprop="name">2019-08</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-02T05:19:27+08:00" content="2019-08-02">
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/02/我为什么这么焦虑/" itemprop="url">
-              
-                <span itemprop="name">我为什么这么焦虑</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-02T04:45:19+08:00" content="2019-08-02">
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-    </div>
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -507,6 +569,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -527,8 +593,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -606,6 +681,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#42-接雨水"><span class="nav-number">1.</span> <span class="nav-text">42. 接雨水</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#暴力解"><span class="nav-number">1.1.</span> <span class="nav-text">暴力解:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">1.1.1.</span> <span class="nav-text">思路:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法"><span class="nav-number">1.1.2.</span> <span class="nav-text">算法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.1.3.</span> <span class="nav-text">代码:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度"><span class="nav-number">1.1.4.</span> <span class="nav-text">复杂度:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用栈"><span class="nav-number">1.2.</span> <span class="nav-text">应用栈:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路-1"><span class="nav-number">1.2.1.</span> <span class="nav-text">思路:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法-1"><span class="nav-number">1.2.2.</span> <span class="nav-text">算法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#图示"><span class="nav-number">1.2.3.</span> <span class="nav-text">图示:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-1"><span class="nav-number">1.2.4.</span> <span class="nav-text">代码:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度-1"><span class="nav-number">1.2.5.</span> <span class="nav-text">复杂度:</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -746,6 +837,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
