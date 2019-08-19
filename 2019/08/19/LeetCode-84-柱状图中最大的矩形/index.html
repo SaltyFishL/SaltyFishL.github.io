@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="随便聊聊,">
+  <meta name="keywords" content="LeetCode,Java,Algorithms,Stack,HashSet,">
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="在期末考试之前的那段日子里得知字节跳动要和学校联合搞一个Android的暑期课程, 本着闲着也是闲着的心态填了报名表. 训练从7月11号开始, 一直持续到8月22号. 对于我而言, Android是一个全新的东西, 所以说学起来并不是那么轻松. 两个星期的速成课每天都要接收大量的信息, 每天课后还有相应的实验需要完成. 尽管有点累, 总的来说还是很充实, 最后也顺利地和家祺完成了大作业的答辩. 而">
-<meta name="keywords" content="随便聊聊">
+<meta name="description" content="题面 暴力解:思路:对于每个出现的柱子高度, 找到该高度对应的最大面积.对于高度2, 1, 5, 6, 2, 3, 出现了1, 2, 3, 5, 6五个高度. 我们只需遍历一遍这五个高度, 找出每个高度对应的连续的高大于等于该高度的柱子数即可. 算法: 创建HashSet, 对高度进行去重. 以height遍历HashSet中每一个高度 初始化maxWidth = 0, width = 0 遍历原">
+<meta name="keywords" content="LeetCode,Java,Algorithms,Stack,HashSet">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我为什么这么焦虑">
-<meta property="og:url" content="http://yoursite.com/2019/08/02/我为什么这么焦虑/index.html">
+<meta property="og:title" content="LeetCode#84 柱状图中最大的矩形">
+<meta property="og:url" content="http://yoursite.com/2019/08/19/LeetCode-84-柱状图中最大的矩形/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="在期末考试之前的那段日子里得知字节跳动要和学校联合搞一个Android的暑期课程, 本着闲着也是闲着的心态填了报名表. 训练从7月11号开始, 一直持续到8月22号. 对于我而言, Android是一个全新的东西, 所以说学起来并不是那么轻松. 两个星期的速成课每天都要接收大量的信息, 每天课后还有相应的实验需要完成. 尽管有点累, 总的来说还是很充实, 最后也顺利地和家祺完成了大作业的答辩. 而">
+<meta property="og:description" content="题面 暴力解:思路:对于每个出现的柱子高度, 找到该高度对应的最大面积.对于高度2, 1, 5, 6, 2, 3, 出现了1, 2, 3, 5, 6五个高度. 我们只需遍历一遍这五个高度, 找出每个高度对应的连续的高大于等于该高度的柱子数即可. 算法: 创建HashSet, 对高度进行去重. 以height遍历HashSet中每一个高度 初始化maxWidth = 0, width = 0 遍历原">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-08T06:55:00.456Z">
+<meta property="og:updated_time" content="2019-08-19T07:04:20.582Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我为什么这么焦虑">
-<meta name="twitter:description" content="在期末考试之前的那段日子里得知字节跳动要和学校联合搞一个Android的暑期课程, 本着闲着也是闲着的心态填了报名表. 训练从7月11号开始, 一直持续到8月22号. 对于我而言, Android是一个全新的东西, 所以说学起来并不是那么轻松. 两个星期的速成课每天都要接收大量的信息, 每天课后还有相应的实验需要完成. 尽管有点累, 总的来说还是很充实, 最后也顺利地和家祺完成了大作业的答辩. 而">
+<meta name="twitter:title" content="LeetCode#84 柱状图中最大的矩形">
+<meta name="twitter:description" content="题面 暴力解:思路:对于每个出现的柱子高度, 找到该高度对应的最大面积.对于高度2, 1, 5, 6, 2, 3, 出现了1, 2, 3, 5, 6五个高度. 我们只需遍历一遍这五个高度, 找出每个高度对应的连续的高大于等于该高度的柱子数即可. 算法: 创建HashSet, 对高度进行去重. 以height遍历HashSet中每一个高度 初始化maxWidth = 0, width = 0 遍历原">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/02/我为什么这么焦虑/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/19/LeetCode-84-柱状图中最大的矩形/">
 
 
 
 
 
-  <title>我为什么这么焦虑 | SaltyFishL's 个人网站</title>
+  <title>LeetCode#84 柱状图中最大的矩形 | SaltyFishL's 个人网站</title>
   
 
 
@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/02/我为什么这么焦虑/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/19/LeetCode-84-柱状图中最大的矩形/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junqi Lu">
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我为什么这么焦虑</h1>
+          <h1 class="post-title" itemprop="name headline">LeetCode#84 柱状图中最大的矩形</h1>
         
 
         <div class="post-meta">
@@ -338,8 +338,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-02T04:45:19+08:00">
-                2019-08-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-19T02:35:02+08:00">
+                2019-08-19
               </time>
             
 
@@ -354,12 +354,34 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-08T14:55:00+08:00">
-                2019-08-08
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-19T15:04:20+08:00">
+                2019-08-19
               </time>
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -388,10 +410,81 @@
       
 
       
-        <p>在期末考试之前的那段日子里得知字节跳动要和学校联合搞一个Android的暑期课程, 本着闲着也是闲着的心态填了报名表. 训练从7月11号开始, 一直持续到8月22号. 对于我而言, Android是一个全新的东西, 所以说学起来并不是那么轻松. 两个星期的速成课每天都要接收大量的信息, 每天课后还有相应的实验需要完成. 尽管有点累, 总的来说还是很充实, 最后也顺利地和家祺完成了大作业的答辩.</p>
-<p>而现在已经是八月的第二天了, 昨天去参加了字节跳动的Android实习的面试. 结果挺惨淡, 被面试官问得心里发毛. 回来后的感觉说不上来是失落还是什么, 毕竟本来也确实是抱着不管怎样去面一下总不亏的想法, 不过确实感觉心里梗梗的, 准确来说就是焦虑吧.</p>
-<p>为什么会有这样的焦虑呢, 可能是因为理想与现实之间的巨大落差, 更可怕的是造成这种落差的根源就是自己. 回望这两年的大学生活, 除去那么几个时间点略微地为自己考虑和规划, 更多的是被推着迷茫地向前走. 对于专业课程, 大多只是流于表面, 而没有去深究. 现在想起来, 好像大学以来就没有细致地, 完整地读过任何一本书, 大多是人云亦云, 跟风从众, 三分热度, 半途而废. 老实说, 我是一个在自我管理方面做得很差的一个人, 特别是当没有一个明确的目标时, 往往会把大量的时间浪费在无意义的社交网络上, 窥探别人的生活, 荒废自己的日子.</p>
-<p>现在是大二结束的暑假, 好像是时候为自己未来的人生做做规划了. Android是一个有趣的东西, 在开发Android的过程中, 既能体验到前端设计的美, 又能和后端通信满足一点点控制欲. 总听到种一棵树, 最好的时机是十年前, 其次是现在. 为了在这个学期结束后的寒假找到一份满意的实习, 大概需要掌握数据结构与算法, 数据库, 操作系统, 汇编语言, 计算机网络, Android开发, Java特性等等的技能, 再多了解Android的新技术, 类似于flutter, kotlin这样的. 接下来的日子里就在这个博客里记录我的计划和学习吧.</p>
+        <p><a href="https://leetcode-cn.com/problems/largest-rectangle-in-histogram/" target="_blank" rel="noopener">题面</a></p>
+<h3 id="暴力解"><a href="#暴力解" class="headerlink" title="暴力解:"></a>暴力解:</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>对于每个出现的柱子高度, 找到该高度对应的最大面积.<br>对于高度2, 1, 5, 6, 2, 3, 出现了1, 2, 3, 5, 6五个高度. 我们只需遍历一遍这五个高度, 找出每个高度对应的连续的高大于等于该高度的柱子数即可.</p>
+<h4 id="算法"><a href="#算法" class="headerlink" title="算法:"></a>算法:</h4><ul>
+<li>创建HashSet, 对高度进行去重.</li>
+<li>以<code>height</code>遍历HashSet中每一个高度<ul>
+<li>初始化<code>maxWidth = 0</code>, <code>width = 0</code></li>
+<li>遍历原柱子数组<ul>
+<li>如果当前高度大于<code>height</code>, <code>width++</code>.</li>
+<li>否则, <code>maxWidth = Math.max(maxWidth, width)</code>, <code>width = 0</code>.</li>
+</ul>
+</li>
+<li>再次更新<code>maxWidth</code>, 以比较最后一串连续的柱子宽和<code>maxWidth</code>.</li>
+<li>更新最大面积<code>maxArea</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">public</span> <span class="keyword">int</span> <span class="title">largestRectangleArea</span><span class="params">(<span class="keyword">int</span>[] heights)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> maxArea = <span class="number">0</span>;</span><br><span class="line">    HashSet&lt;Integer&gt; heightSet = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> height : heights) &#123;</span><br><span class="line">        heightSet.add(height);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (Integer height : heightSet) &#123;</span><br><span class="line">        <span class="keyword">int</span> maxWidth = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> width = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> currentHeight : heights) &#123;</span><br><span class="line">            <span class="keyword">if</span> (currentHeight &gt;= height) &#123;</span><br><span class="line">                width++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                maxWidth = Math.max(maxWidth, width);</span><br><span class="line">                width = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        maxWidth = Math.max(maxWidth, width);</span><br><span class="line">        maxArea = Math.max(maxArea, maxWidth * height);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> maxArea;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度:"></a>复杂度:</h4><table>
+<thead>
+<tr>
+<th>执行用时</th>
+<th>内存消耗</th>
+<th>语言</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>708ms(18.85%)</td>
+<td>44.3MB(20.35%)</td>
+<td>Java</td>
+</tr>
+</tbody></table>
+<ul>
+<li>时间复杂度 $ O(n^2) $, 最坏情况, 当所有柱子高度都不同, 且依次递增时, 内外循环次数都为n</li>
+<li>空间复杂度 $ O(n) $, HashSet占用额外$ O(n) $</li>
+</ul>
+<p><strong>空间复杂度为$ O(n^2) $时, 会爆内存.</strong></p>
+<hr>
+<h3 id="应用单调栈"><a href="#应用单调栈" class="headerlink" title="应用单调栈"></a>应用单调栈</h3><h4 id="思路-1"><a href="#思路-1" class="headerlink" title="思路:"></a>思路:</h4><p>遍历每个柱子, 对每个柱子而言, 他所能达到的最大面积为, 最小高度为该柱子的高度, 宽度最宽的矩形. 即对于每个柱子, 要找到他左右两边第一个小于他的柱子, 中间形成的矩形的面积便是该柱子所能达到的最大面积.</p>
+<p>这样的思路和<a href="/2019/08/17/LeetCode-42-接雨水/" title="LeetCode#42 接雨水">LeetCode#42 接雨水</a>就很像了, 考虑运用单调栈解决问题.</p>
+<p>考虑一排递增的柱子, 每个柱子的左边第一个便是第一个小于他的柱子. 我们用栈来维护这样一个递增的序列. 遍历所有柱子, 如果当前柱子的高度大于等于栈顶柱子的高度, 则直接压栈; 否则, 当前柱子便是现在的栈顶柱子的右边第一个小于他的柱子, 将当前柱子记作right, 弹出栈顶元素记作mid, 弹出后的新栈顶便是mid左边第一个小于他的柱子, 记作left, 这样便可以求出以heights[mid]为高度, 介于left和right之间的矩形面积最大值.</p>
+<h4 id="算法-1"><a href="#算法-1" class="headerlink" title="算法:"></a>算法:</h4><ul>
+<li>初始化栈<code>heightIndexStack</code>, 压入<code>-1</code>(索引<code>-1</code>可作为任意右边柱子的左边界); 初始化最大面积<code>maxArea = 0</code></li>
+<li>遍历所有柱子, 当前遍历到的柱子索引记作<code>current</code><ul>
+<li>如果栈不为空(即栈顶元素不为-1)且当前柱子的高度小于等于栈顶柱子的高度(如果去掉等于, 假定一组高度为1, 1, 2, 2, 1, 那么当读到最后一个1时, 栈内为-1, 0, 1, 2, 3, 显然当索引3作为中间值的时候, 索引2并不能成为其左边界).<ul>
+<li>弹出栈顶元素, 记作<code>mid</code></li>
+<li>以<code>heights[mid]</code>为高度的最大矩形区域的宽为<code>width = current - heightIndexStack.peek() - 1</code></li>
+<li>更新<code>maxArea = Math.max(maxArea, heights[mid] * width)</code></li>
+</ul>
+</li>
+<li>将当前柱子索引压栈</li>
+</ul>
+</li>
+<li>若此时栈仍然不为空(即栈顶元素不为-1), 相当于<code>current</code>移动到<code>heights.length</code>的位置, 继续更新<code>maxArea</code>直到栈空<h4 id="代码-1"><a href="#代码-1" class="headerlink" title="代码:"></a>代码:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">public</span> <span class="keyword">int</span> <span class="title">largestRectangleArea</span><span class="params">(<span class="keyword">int</span>[] heights)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (heights == <span class="keyword">null</span> || heights.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> maxArea = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    Stack&lt;Integer&gt; heightIndexStack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    heightIndexStack.push(-<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> current = <span class="number">0</span>; current &lt; heights.length; current++) &#123;</span><br><span class="line">        <span class="keyword">while</span> (heightIndexStack.peek() != -<span class="number">1</span> &amp;&amp; heights[current] &lt;= heights[heightIndexStack.peek()]) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = heightIndexStack.pop();</span><br><span class="line">            <span class="keyword">int</span> width = current - heightIndexStack.peek() - <span class="number">1</span>;</span><br><span class="line">            maxArea = Math.max(maxArea, width * heights[mid]);</span><br><span class="line">        &#125;</span><br><span class="line">        heightIndexStack.push(current);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (heightIndexStack.peek() != -<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = heightIndexStack.pop();</span><br><span class="line">        <span class="keyword">int</span> width = heights.length - heightIndexStack.peek() - <span class="number">1</span>;</span><br><span class="line">        maxArea = Math.max(maxArea, width * heights[mid]);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> maxArea;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="复杂度-1"><a href="#复杂度-1" class="headerlink" title="复杂度:"></a>复杂度:</h4><table>
+<thead>
+<tr>
+<th>执行用时</th>
+<th>内存消耗</th>
+<th>语言</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>44ms(42.76%)</td>
+<td>43.1MB(34.64%)</td>
+<td>Java</td>
+</tr>
+</tbody></table>
+<ul>
+<li>时间复杂度 $ O(n) $, 每个元素入栈出栈两次操作.</li>
+<li>空间复杂度 $ O(n) $, 栈需要额外的$ O(n) $空间.</li>
+</ul>
 
       
     </div>
@@ -409,7 +502,15 @@
       
         <div class="post-tags">
           
-            <a href="/tags/随便聊聊/" rel="tag"># 随便聊聊</a>
+            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Algorithms/" rel="tag"># Algorithms</a>
+          
+            <a href="/tags/Stack/" rel="tag"># Stack</a>
+          
+            <a href="/tags/HashSet/" rel="tag"># HashSet</a>
           
         </div>
       
@@ -437,15 +538,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2019/08/17/LeetCode-42-接雨水/" rel="next" title="LeetCode#42 接雨水">
+                <i class="fa fa-chevron-left"></i> LeetCode#42 接雨水
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/02/2019-08/" rel="prev" title="2019-08">
-                2019-08 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -497,8 +598,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -576,6 +686,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#暴力解"><span class="nav-number">1.</span> <span class="nav-text">暴力解:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">1.1.</span> <span class="nav-text">思路:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法"><span class="nav-number">1.2.</span> <span class="nav-text">算法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.3.</span> <span class="nav-text">代码:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度"><span class="nav-number">1.4.</span> <span class="nav-text">复杂度:</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用单调栈"><span class="nav-number">2.</span> <span class="nav-text">应用单调栈</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路-1"><span class="nav-number">2.1.</span> <span class="nav-text">思路:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法-1"><span class="nav-number">2.2.</span> <span class="nav-text">算法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码-1"><span class="nav-number">2.3.</span> <span class="nav-text">代码:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度-1"><span class="nav-number">2.4.</span> <span class="nav-text">复杂度:</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
