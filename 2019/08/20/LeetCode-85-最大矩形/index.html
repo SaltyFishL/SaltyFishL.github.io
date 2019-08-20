@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="LeetCode,Java,Algorithms,Stack,">
 
 
 
@@ -93,17 +93,18 @@
 
 
 
-<meta name="description" content="忘了多可惜">
-<meta name="keywords" content="北京理工大学 BIT 17级 学习中 Android Leetcode 移动开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
+<meta name="description" content="题面运用栈:思路:为方便讨论, 假定矩阵的层数从上往下依次递增. 假定最大矩形的底边在第n层, 对于第n层中为”0”的那些列, 对最大矩形无贡献. 对于第n层中为”1”的那些列, 最大矩形的高度为某一个”1”往上的连续个”1”之和. 遍历矩阵的层, 对每层按LeetCode#84 柱状图中最大的矩形的算法求出对应的面积. 要求的最大面积为这n层所求面积中最大的那个. 算法: 初始化高度数组heig">
+<meta name="keywords" content="LeetCode,Java,Algorithms,Stack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode#85 最大矩形">
+<meta property="og:url" content="http://yoursite.com/2019/08/20/LeetCode-85-最大矩形/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="忘了多可惜">
+<meta property="og:description" content="题面运用栈:思路:为方便讨论, 假定矩阵的层数从上往下依次递增. 假定最大矩形的底边在第n层, 对于第n层中为”0”的那些列, 对最大矩形无贡献. 对于第n层中为”1”的那些列, 最大矩形的高度为某一个”1”往上的连续个”1”之和. 遍历矩阵的层, 对每层按LeetCode#84 柱状图中最大的矩形的算法求出对应的面积. 要求的最大面积为这n层所求面积中最大的那个. 算法: 初始化高度数组heig">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-20T03:48:31.634Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SaltyFishL&#39;s 个人网站">
-<meta name="twitter:description" content="忘了多可惜">
+<meta name="twitter:title" content="LeetCode#85 最大矩形">
+<meta name="twitter:description" content="题面运用栈:思路:为方便讨论, 假定矩阵的层数从上往下依次递增. 假定最大矩形的底边在第n层, 对于第n层中为”0”的那些列, 对最大矩形无贡献. 对于第n层中为”1”的那些列, 最大矩形的高度为某一个”1”往上的连续个”1”之和. 遍历矩阵的层, 对每层按LeetCode#84 柱状图中最大的矩形的算法求出对应的面积. 要求的最大面积为这n层所求面积中最大的那个. 算法: 初始化高度数组heig">
 
 
 
@@ -133,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2019/08/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/20/LeetCode-85-最大矩形/">
 
 
 
 
 
-  <title>Archive | SaltyFishL's 个人网站</title>
+  <title>LeetCode#85 最大矩形 | SaltyFishL's 个人网站</title>
   
 
 
@@ -168,7 +169,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-archive">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -294,282 +295,232 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/20/LeetCode-85-最大矩形/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junqi Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaltyFishL's 个人网站">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">LeetCode#85 最大矩形</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-20T05:15:51+08:00">
+                2019-08-20
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-20T11:48:31+08:00">
+                2019-08-20
+              </time>
+            
+          </span>
+
           
-        
-        Um..! 7 posts in total. Keep on posting.
-      </span>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a><a href="https://leetcode-cn.com/problems/maximal-rectangle/" target="_blank" rel="noopener">题面</a></h2><h3 id="运用栈"><a href="#运用栈" class="headerlink" title="运用栈:"></a>运用栈:</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>为方便讨论, 假定矩阵的层数从上往下依次递增. 假定最大矩形的底边在第n层, 对于第n层中为”0”的那些列, 对最大矩形无贡献. 对于第n层中为”1”的那些列, 最大矩形的高度为某一个”1”往上的连续个”1”之和.</p>
+<p>遍历矩阵的层, 对每层按<a href="/2019/08/19/LeetCode-84-柱状图中最大的矩形/" title="LeetCode#84 柱状图中最大的矩形">LeetCode#84 柱状图中最大的矩形</a>的算法求出对应的面积. 要求的最大面积为这n层所求面积中最大的那个.</p>
+<h4 id="算法"><a href="#算法" class="headerlink" title="算法:"></a>算法:</h4><ul>
+<li>初始化高度数组<code>heights[matrix.length][matrix[0].length]</code>, <code>maxArea = 0</code><ul>
+<li>按层遍历<code>matrix</code>, 对于矩阵的每层, 更新相应的<code>heights[i][]</code></li>
+<li>按照<a href="/2019/08/19/LeetCode-84-柱状图中最大的矩形/" title="LeetCode#84 柱状图中最大的矩形">LeetCode#84 柱状图中最大的矩形</a>中的算法传入高度数组, 更新<code>maxArea</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maximalRectangle</span><span class="params">(<span class="keyword">char</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (matrix == <span class="keyword">null</span> || matrix.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> maxArea = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span>[][] heights = <span class="keyword">new</span> <span class="keyword">int</span>[matrix.length][matrix[<span class="number">0</span>].length];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; heights.length; i++) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; heights[<span class="number">0</span>].length; j++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i == <span class="number">0</span>) &#123;</span><br><span class="line">                heights[i][j] = matrix[i][j] == <span class="string">'0'</span> ? <span class="number">0</span> : <span class="number">1</span>;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                heights[i][j] = matrix[i][j] == <span class="string">'0'</span> ? <span class="number">0</span> : heights[i - <span class="number">1</span>][j] + <span class="number">1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span>[] height : heights) &#123;</span><br><span class="line">        maxArea = Math.max(maxArea, maxHistogramRectangle(height));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> maxArea;        </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">static</span> <span class="keyword">private</span> <span class="keyword">int</span> <span class="title">maxHistogramRectangle</span><span class="params">(<span class="keyword">int</span>[] heights)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> maxArea = <span class="number">0</span>;</span><br><span class="line">    Stack&lt;Integer&gt; heightsIndexStack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    heightsIndexStack.push(-<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; heights.length; i++) &#123;</span><br><span class="line">        <span class="keyword">while</span> (heightsIndexStack.peek() != -<span class="number">1</span> &amp;&amp; heights[i] &lt;= heights[heightsIndexStack.peek()]) &#123;</span><br><span class="line">            <span class="keyword">int</span> mid = heightsIndexStack.pop();</span><br><span class="line">            <span class="keyword">int</span> width = i - heightsIndexStack.peek() - <span class="number">1</span>;</span><br><span class="line">            maxArea = Math.max(maxArea, heights[mid] * width);</span><br><span class="line">        &#125;</span><br><span class="line">        heightsIndexStack.push(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (heightsIndexStack.peek() != -<span class="number">1</span>) &#123;</span><br><span class="line">        <span class="keyword">int</span> mid = heightsIndexStack.pop();</span><br><span class="line">        <span class="keyword">int</span> width = heights.length - heightsIndexStack.peek() - <span class="number">1</span>;</span><br><span class="line">        maxArea = Math.max(maxArea, heights[mid] * width);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> maxArea;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度:"></a>复杂度:</h4><table>
+<thead>
+<tr>
+<th>执行用时</th>
+<th>内存消耗</th>
+<th>语言</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>54ms(27.98%)</td>
+<td>49.3MB(45.00%)</td>
+<td>Java</td>
+</tr>
+</tbody></table>
+<p>假定矩阵为$ m \times n $矩阵</p>
+<ul>
+<li>时间复杂度 $ O(m*n) $, 计算<code>heights[][]</code>需要$ O(m * n) $; 遍历层数, 对每层求最大面积需要$ O(m * n) $.</li>
+<li>空间复杂度 $ O(m*n) $, 存放高度的<code>heights[][]</code>需要$ O(m * n) $; 栈需要$ O(n) $.</li>
+</ul>
+<hr>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Algorithms/" rel="tag"># Algorithms</a>
+          
+            <a href="/tags/Stack/" rel="tag"># Stack</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
         
-        
+
         
 
         
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
           </div>
         
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/20/LeetCode-85-最大矩形/" itemprop="url">
-              
-                <span itemprop="name">LeetCode#85 最大矩形</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-20T05:15:51+08:00" content="2019-08-20">
-          08-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        </div>
+      
       
 
-        
-        
-        
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/19/LeetCode-84-柱状图中最大的矩形/" rel="next" title="LeetCode#84 柱状图中最大的矩形">
+                <i class="fa fa-chevron-left"></i> LeetCode#84 柱状图中最大的矩形
+              </a>
+            
+          </div>
 
-        
-        
+          <span class="post-nav-divider"></span>
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/19/LeetCode-84-柱状图中最大的矩形/" itemprop="url">
-              
-                <span itemprop="name">LeetCode#84 柱状图中最大的矩形</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-19T02:35:02+08:00" content="2019-08-19">
-          08-19
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/17/LeetCode-42-接雨水/" itemprop="url">
-              
-                <span itemprop="name">LeetCode#42 接雨水</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-17T22:40:42+08:00" content="2019-08-17">
-          08-17
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/11/Homework-Problems-and-Questions-Chapter1/" itemprop="url">
-              
-                <span itemprop="name">Homework Problems and Questions Chapter1</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-11T06:18:40+08:00" content="2019-08-11">
-          08-11
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/04/Chapter1-Computer-Networks-and-the-Internet/" itemprop="url">
-              
-                <span itemprop="name">Chapter1 Computer Networks and the Internet</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-04T00:08:05+08:00" content="2019-08-04">
-          08-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/02/2019-08/" itemprop="url">
-              
-                <span itemprop="name">2019-08</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-02T05:19:27+08:00" content="2019-08-02">
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/02/我为什么这么焦虑/" itemprop="url">
-              
-                <span itemprop="name">我为什么这么焦虑</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-02T04:45:19+08:00" content="2019-08-02">
-          08-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-    </div>
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -577,6 +528,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -597,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -676,6 +640,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运用栈"><span class="nav-number">1.1.</span> <span class="nav-text">运用栈:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">1.1.1.</span> <span class="nav-text">思路:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法"><span class="nav-number">1.1.2.</span> <span class="nav-text">算法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.1.3.</span> <span class="nav-text">代码:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度"><span class="nav-number">1.1.4.</span> <span class="nav-text">复杂度:</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -816,6 +796,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
