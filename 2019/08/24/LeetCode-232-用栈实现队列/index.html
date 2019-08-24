@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="LeetCode,Java,Algorithms,Stack,">
 
 
 
@@ -93,18 +93,20 @@
 
 
 
-<meta name="description" content="忘了多可惜">
-<meta name="keywords" content="北京理工大学 BIT 17级 学习中 Android Leetcode 移动开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta name="description" content="题面两个栈实现:思路:用一个栈作为队列尾, 另一个栈作为队列头. 形如: 算法: 入队直接压入rear  出队如果front不为空直接出front栈顶, 如果front为空, 将rear元素全部转移到front再出front栈顶.  为空判断两个栈是否都为空  队首与出队类似   代码:12345678910111213141516171819202122232425262728293031323">
+<meta name="keywords" content="LeetCode,Java,Algorithms,Stack">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode#232 用栈实现队列">
+<meta property="og:url" content="http://yoursite.com/2019/08/24/LeetCode-232-用栈实现队列/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="忘了多可惜">
+<meta property="og:description" content="题面两个栈实现:思路:用一个栈作为队列尾, 另一个栈作为队列头. 形如: 算法: 入队直接压入rear  出队如果front不为空直接出front栈顶, 如果front为空, 将rear元素全部转移到front再出front栈顶.  为空判断两个栈是否都为空  队首与出队类似   代码:12345678910111213141516171819202122232425262728293031323">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-26T07:50:32.588Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20190824192007.jpg">
+<meta property="og:updated_time" content="2019-08-24T11:30:22.185Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="标签">
-<meta name="twitter:description" content="忘了多可惜">
+<meta name="twitter:title" content="LeetCode#232 用栈实现队列">
+<meta name="twitter:description" content="题面两个栈实现:思路:用一个栈作为队列尾, 另一个栈作为队列头. 形如: 算法: 入队直接压入rear  出队如果front不为空直接出front栈顶, 如果front为空, 将rear元素全部转移到front再出front栈顶.  为空判断两个栈是否都为空  队首与出队类似   代码:12345678910111213141516171819202122232425262728293031323">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20190824192007.jpg">
 
 
 
@@ -134,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/">
+  <link rel="canonical" href="http://yoursite.com/2019/08/24/LeetCode-232-用栈实现队列/">
 
 
 
 
 
-  <title>标签 | SaltyFishL's 个人网站</title>
+  <title>LeetCode#232 用栈实现队列 | SaltyFishL's 个人网站</title>
   
 
 
@@ -297,40 +299,230 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/24/LeetCode-232-用栈实现队列/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junqi Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaltyFishL's 个人网站">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">标签</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
-                9 tags in total
-            </div>
-            <div class="tag-cloud-tags">
-              <a href="/tags/Algorithms/" style="font-size: 30px; color: #111">Algorithms</a> <a href="/tags/Computer-Networks/" style="font-size: 21px; color: #6f6f6f">Computer Networks</a> <a href="/tags/HashSet/" style="font-size: 12px; color: #ccc">HashSet</a> <a href="/tags/Java/" style="font-size: 30px; color: #111">Java</a> <a href="/tags/LeetCode/" style="font-size: 30px; color: #111">LeetCode</a> <a href="/tags/Notes/" style="font-size: 12px; color: #ccc">Notes</a> <a href="/tags/Stack/" style="font-size: 30px; color: #111">Stack</a> <a href="/tags/计划/" style="font-size: 12px; color: #ccc">计划</a> <a href="/tags/随便聊聊/" style="font-size: 12px; color: #ccc">随便聊聊</a>
-            </div>
-          </div>
+          <h1 class="post-title" itemprop="name headline">LeetCode#232 用栈实现队列</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-24T10:16:28+08:00">
+                2019-08-24
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-08-24T19:30:22+08:00">
+                2019-08-24
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
+                    <span itemprop="name">LeetCode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a><a href="https://leetcode-cn.com/problems/implement-queue-using-stacks/" target="_blank" rel="noopener">题面</a></h2><h3 id="两个栈实现"><a href="#两个栈实现" class="headerlink" title="两个栈实现:"></a>两个栈实现:</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>用一个栈作为队列尾, 另一个栈作为队列头. 形如:<br><img src="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20190824192007.jpg" alt="栈实现队列"></p>
+<h4 id="算法"><a href="#算法" class="headerlink" title="算法:"></a>算法:</h4><ul>
+<li><p>入队<br>直接压入<code>rear</code></p>
+</li>
+<li><p>出队<br>如果<code>front</code>不为空直接出<code>front</code>栈顶, 如果<code>front</code>为空, 将<code>rear</code>元素全部转移到<code>front</code>再出<code>front</code>栈顶.</p>
+</li>
+<li><p>为空<br>判断两个栈是否都为空</p>
+</li>
+<li><p>队首<br>与出队类似</p>
+</li>
+</ul>
+<h4 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyQueue</span> </span>&#123;</span><br><span class="line">    Stack&lt;Integer&gt; front;</span><br><span class="line">    Stack&lt;Integer&gt; rear;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">MyQueue</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        front = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        rear = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Push element x to the back of queue. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">push</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        rear.push(x);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Removes the element from in front of queue and returns that element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">pop</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (empty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"QueueEmpty"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (front.empty()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!rear.empty()) &#123;</span><br><span class="line">                front.push(rear.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> front.pop();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Get the front element. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">peek</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (empty()) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"QueueEmpty"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (front.empty()) &#123;</span><br><span class="line">            <span class="keyword">while</span> (!rear.empty()) &#123;</span><br><span class="line">                front.push(rear.pop());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> front.peek();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** Returns whether the queue is empty. */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">empty</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> front.empty() &amp;&amp; rear.empty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度:"></a>复杂度:</h4><table>
+<thead>
+<tr>
+<th>执行用时</th>
+<th>内存消耗</th>
+<th>语言</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>83ms(90.67%)</td>
+<td>35MB(43.88%)</td>
+<td>Java</td>
+</tr>
+</tbody></table>
+<ul>
+<li>时间复杂度: 分摊下来为$ O(1) $, 对于任意$n$个元素的入队和出队来说, 其操作总次数都不会超过$4n$次, 即每个元素都入队列且都出队(相当于每个元素都入<code>rear</code>栈, 出<code>rear</code>栈, 进<code>front</code>栈, 再出<code>front</code>栈). 但对于某一次的出队操作来说, 其时间复杂度会出现$ O(n) $的情况.</li>
+<li>空间复杂度 $ O(n) $, 需要两个栈存元素.</li>
+</ul>
+<hr>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+            <a href="/tags/Algorithms/" rel="tag"># Algorithms</a>
+          
+            <a href="/tags/Stack/" rel="tag"># Stack</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/20/LeetCode-85-最大矩形/" rel="next" title="LeetCode#85 最大矩形">
+                <i class="fa fa-chevron-left"></i> LeetCode#85 最大矩形
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -363,8 +555,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -442,6 +643,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#两个栈实现"><span class="nav-number">1.1.</span> <span class="nav-text">两个栈实现:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">1.1.1.</span> <span class="nav-text">思路:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法"><span class="nav-number">1.1.2.</span> <span class="nav-text">算法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.1.3.</span> <span class="nav-text">代码:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度"><span class="nav-number">1.1.4.</span> <span class="nav-text">复杂度:</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

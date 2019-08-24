@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode#232 用栈实现队列]]></title>
+    <url>%2F2019%2F08%2F24%2FLeetCode-232-%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%2F</url>
+    <content type="text"><![CDATA[题面两个栈实现:思路:用一个栈作为队列尾, 另一个栈作为队列头. 形如: 算法: 入队直接压入rear 出队如果front不为空直接出front栈顶, 如果front为空, 将rear元素全部转移到front再出front栈顶. 为空判断两个栈是否都为空 队首与出队类似 代码:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748class MyQueue &#123; Stack&lt;Integer&gt; front; Stack&lt;Integer&gt; rear; /** Initialize your data structure here. */ public MyQueue() &#123; front = new Stack&lt;&gt;(); rear = new Stack&lt;&gt;(); &#125; /** Push element x to the back of queue. */ public void push(int x) &#123; rear.push(x); &#125; /** Removes the element from in front of queue and returns that element. */ public int pop() &#123; if (empty()) &#123; throw new RuntimeException("QueueEmpty"); &#125; if (front.empty()) &#123; while (!rear.empty()) &#123; front.push(rear.pop()); &#125; &#125; return front.pop(); &#125; /** Get the front element. */ public int peek() &#123; if (empty()) &#123; throw new RuntimeException("QueueEmpty"); &#125; if (front.empty()) &#123; while (!rear.empty()) &#123; front.push(rear.pop()); &#125; &#125; return front.peek(); &#125; /** Returns whether the queue is empty. */ public boolean empty() &#123; return front.empty() &amp;&amp; rear.empty(); &#125;&#125; 复杂度: 执行用时 内存消耗 语言 83ms(90.67%) 35MB(43.88%) Java 时间复杂度: 分摊下来为$ O(1) $, 对于任意$n$个元素的入队和出队来说, 其操作总次数都不会超过$4n$次, 即每个元素都入队列且都出队(相当于每个元素都入rear栈, 出rear栈, 进front栈, 再出front栈). 但对于某一次的出队操作来说, 其时间复杂度会出现$ O(n) $的情况. 空间复杂度 $ O(n) $, 需要两个栈存元素.]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>Java</tag>
+        <tag>Algorithms</tag>
+        <tag>Stack</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode#85 最大矩形]]></title>
     <url>%2F2019%2F08%2F20%2FLeetCode-85-%E6%9C%80%E5%A4%A7%E7%9F%A9%E5%BD%A2%2F</url>
     <content type="text"><![CDATA[题面运用栈:思路:为方便讨论, 假定矩阵的层数从上往下依次递增. 假定最大矩形的底边在第n层, 对于第n层中为”0”的那些列, 对最大矩形无贡献. 对于第n层中为”1”的那些列, 最大矩形的高度为某一个”1”往上的连续个”1”之和. 遍历矩阵的层, 对每层按LeetCode#84 柱状图中最大的矩形的算法求出对应的面积. 要求的最大面积为这n层所求面积中最大的那个. 算法: 初始化高度数组heights[matrix.length][matrix[0].length], maxArea = 0 按层遍历matrix, 对于矩阵的每层, 更新相应的heights[i][] 按照LeetCode#84 柱状图中最大的矩形中的算法传入高度数组, 更新maxArea 代码:123456789101112131415161718192021222324252627282930313233343536373839404142434445public int maximalRectangle(char[][] matrix) &#123; if (matrix == null || matrix.length == 0) &#123; return 0; &#125; int maxArea = 0; int[][] heights = new int[matrix.length][matrix[0].length]; for (int i = 0; i &lt; heights.length; i++) &#123; for (int j = 0; j &lt; heights[0].length; j++) &#123; if (i == 0) &#123; heights[i][j] = matrix[i][j] == '0' ? 0 : 1; &#125; else &#123; heights[i][j] = matrix[i][j] == '0' ? 0 : heights[i - 1][j] + 1; &#125; &#125; &#125; for (int[] height : heights) &#123; maxArea = Math.max(maxArea, maxHistogramRectangle(height)); &#125; return maxArea; &#125;static private int maxHistogramRectangle(int[] heights) &#123; int maxArea = 0; Stack&lt;Integer&gt; heightsIndexStack = new Stack&lt;&gt;(); heightsIndexStack.push(-1); for (int i = 0; i &lt; heights.length; i++) &#123; while (heightsIndexStack.peek() != -1 &amp;&amp; heights[i] &lt;= heights[heightsIndexStack.peek()]) &#123; int mid = heightsIndexStack.pop(); int width = i - heightsIndexStack.peek() - 1; maxArea = Math.max(maxArea, heights[mid] * width); &#125; heightsIndexStack.push(i); &#125; while (heightsIndexStack.peek() != -1) &#123; int mid = heightsIndexStack.pop(); int width = heights.length - heightsIndexStack.peek() - 1; maxArea = Math.max(maxArea, heights[mid] * width); &#125; return maxArea;&#125; 复杂度: 执行用时 内存消耗 语言 54ms(27.98%) 49.3MB(45.00%) Java 假定矩阵为$ m \times n $矩阵 时间复杂度 $ O(m*n) $, 计算heights[][]需要$ O(m * n) $; 遍历层数, 对每层求最大面积需要$ O(m * n) $. 空间复杂度 $ O(m*n) $, 存放高度的heights[][]需要$ O(m * n) $; 栈需要$ O(n) $.]]></content>
