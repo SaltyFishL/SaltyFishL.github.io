@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode#316 去除重复字母]]></title>
+    <url>%2F2019%2F08%2F24%2FLeetCode-316-%E5%8E%BB%E9%99%A4%E9%87%8D%E5%A4%8D%E5%AD%97%E6%AF%8D%2F</url>
+    <content type="text"><![CDATA[题面解:思路:总的想法是, 尽量让字典序小的字母靠前出现. 对于字符串cbacdcbc进行遍历, 在已经选择的串为c的情况下考虑第二个字母b, 因为后面仍然有c, 且b的字典序比c小, 删掉现有的c并将b加入选择的串, 这样得到的结果更优(同一个位置字典序小的字母占优, 不论后面的字母如何变幻). 第三个字母同理. 遍历到第四个和第五个字母时, 字典序呈升序, 直接加入结果仍然最优. 遍历第六个字母c时, 因为选择结果中已经出现过c, 所以不做处理(如果需要做处理, 那么就要删除已选择的元素直到至少把之前的那个c删除才能保证字典序不变大. 如果恰好删除到之前的c, 再加入现在的c, 这样的操作就毫无意义. 如果删除了更之前的, 即类似将a替换成了c, 仍然使字典序变大了). 再到b, 未出现过, 直接加入. 用StringBuilder代替栈, 方便最后转成字符串. 算法: 初始化int[] count数组, 初始化boolean[] used数组, 初始化存放结果的StringBuilder resSb和LinkedList resList 遍历一遍字符串, 记录每个字母出现的次数, count[s.charAt(i) - &#39;a&#39;]++ 遍历字符串, char letter作为当前字符, i为当前索引值. count[letter - &#39;a&#39;]-- 如果当前字符已经出现在sb中, 即used[letter - &#39;a&#39;] == true, continue. 当已选择的字串不为空resList.size() &gt; 0, 该字符的字典序小于栈顶的字符letter &lt; resList.getLast(), 且栈顶字符在字符串的后面仍然会出现count[resList.getLast() - &#39;a&#39;] &gt; 0 更新used[resList.getLast() - &#39;a&#39;] = false 弹出栈顶, resList.removeLast() 循环 添加当前字母, resList.addLast(letter), used[letter - &#39;a&#39;] = true. 遍历resList, 依次添加入resSb, 返回resSb.toString()代码:1234567891011121314151617181920212223242526272829public String removeDuplicateLetters(String s) &#123; int[] count = new int[26]; boolean[] used = new boolean[26]; StringBuilder resSb = new StringBuilder(); LinkedList&lt;Character&gt; resList = new LinkedList&lt;&gt;(); for (int i = 0; i &lt; s.length(); i++) &#123; count[s.charAt(i) - 'a']++; &#125; char letter; for (int i = 0; i &lt; s.length(); i++) &#123; letter = s.charAt(i); count[letter - 'a']--; if (used[letter - 'a']) &#123; continue; &#125; while (resList.size() &gt; 0 &amp;&amp; letter &lt; resList.getLast() &amp;&amp; count[resList.getLast() - 'a'] &gt; 0) &#123; used[resList.getLast() - 'a'] = false; resList.removeLast(); &#125; resList.addLast(letter); used[letter - 'a'] = true; &#125; for (Character character : resList) &#123; resSb.append(character); &#125; return resSb.toString();&#125; 复杂度: 执行用时 内存消耗 语言 12ms(51.42%) 35.7MB(66.07%) Java 时间复杂度 $ O(n) $ 空间复杂度 $ O(n) $]]></content>
+      <categories>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>LeetCode</tag>
+        <tag>Java</tag>
+        <tag>Algorithms</tag>
+        <tag>Stack</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[LeetCode#232 用栈实现队列]]></title>
     <url>%2F2019%2F08%2F24%2FLeetCode-232-%E7%94%A8%E6%A0%88%E5%AE%9E%E7%8E%B0%E9%98%9F%E5%88%97%2F</url>
     <content type="text"><![CDATA[题面两个栈实现:思路:用一个栈作为队列尾, 另一个栈作为队列头. 形如: 算法: 入队直接压入rear 出队如果front不为空直接出front栈顶, 如果front为空, 将rear元素全部转移到front再出front栈顶. 为空判断两个栈是否都为空 队首与出队类似 代码:123456789101112131415161718192021222324252627282930313233343536373839404142434445464748class MyQueue &#123; Stack&lt;Integer&gt; front; Stack&lt;Integer&gt; rear; /** Initialize your data structure here. */ public MyQueue() &#123; front = new Stack&lt;&gt;(); rear = new Stack&lt;&gt;(); &#125; /** Push element x to the back of queue. */ public void push(int x) &#123; rear.push(x); &#125; /** Removes the element from in front of queue and returns that element. */ public int pop() &#123; if (empty()) &#123; throw new RuntimeException("QueueEmpty"); &#125; if (front.empty()) &#123; while (!rear.empty()) &#123; front.push(rear.pop()); &#125; &#125; return front.pop(); &#125; /** Get the front element. */ public int peek() &#123; if (empty()) &#123; throw new RuntimeException("QueueEmpty"); &#125; if (front.empty()) &#123; while (!rear.empty()) &#123; front.push(rear.pop()); &#125; &#125; return front.peek(); &#125; /** Returns whether the queue is empty. */ public boolean empty() &#123; return front.empty() &amp;&amp; rear.empty(); &#125;&#125; 复杂度: 执行用时 内存消耗 语言 83ms(90.67%) 35MB(43.88%) Java 时间复杂度: 分摊下来为$ O(1) $, 对于任意$n$个元素的入队和出队来说, 其操作总次数都不会超过$4n$次, 即每个元素都入队列且都出队(相当于每个元素都入rear栈, 出rear栈, 进front栈, 再出front栈). 但对于某一次的出队操作来说, 其时间复杂度会出现$ O(n) $的情况. 空间复杂度 $ O(n) $, 需要两个栈存元素.]]></content>
