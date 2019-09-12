@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="LeetCode,Java,Algorithms,Stack,">
+  <meta name="keywords" content="随便聊聊,">
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="题面解:思路:总的想法是, 尽量让字典序小的字母靠前出现. 对于字符串cbacdcbc进行遍历, 在已经选择的串为c的情况下考虑第二个字母b, 因为后面仍然有c, 且b的字典序比c小, 删掉现有的c并将b加入选择的串, 这样得到的结果更优(同一个位置字典序小的字母占优, 不论后面的字母如何变幻). 第三个字母同理. 遍历到第四个和第五个字母时, 字典序呈升序, 直接加入结果仍然最优. 遍历第六个字">
-<meta name="keywords" content="LeetCode,Java,Algorithms,Stack">
+<meta name="description" content="现在是2019年中秋最开始的一个小时. 四个小时前, 我, H和Z说趁着小学期结束去喝两杯. 我希望能记录一下, 希望五年或者十年后我还能记得这几个王八蛋酒友. 我和Z君上学期倒是有出来喝过, 最开始在酒吧, 凌晨十二点半, 酒吧许是看着没啥生意, 说要打烊了. 于是我和Z君提着两打燕京在学服门口喝到五点, 期间还绕着学校走了一圈, 最后把阿姨叫醒放我们回去睡大觉, 现在想起来还觉得怪不好意思.">
+<meta name="keywords" content="随便聊聊">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode#316 去除重复字母">
-<meta property="og:url" content="http://yoursite.com/2019/08/24/LeetCode-316-去除重复字母/index.html">
+<meta property="og:title" content="中秋">
+<meta property="og:url" content="http://yoursite.com/2019/09/13/中秋/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="题面解:思路:总的想法是, 尽量让字典序小的字母靠前出现. 对于字符串cbacdcbc进行遍历, 在已经选择的串为c的情况下考虑第二个字母b, 因为后面仍然有c, 且b的字典序比c小, 删掉现有的c并将b加入选择的串, 这样得到的结果更优(同一个位置字典序小的字母占优, 不论后面的字母如何变幻). 第三个字母同理. 遍历到第四个和第五个字母时, 字典序呈升序, 直接加入结果仍然最优. 遍历第六个字">
+<meta property="og:description" content="现在是2019年中秋最开始的一个小时. 四个小时前, 我, H和Z说趁着小学期结束去喝两杯. 我希望能记录一下, 希望五年或者十年后我还能记得这几个王八蛋酒友. 我和Z君上学期倒是有出来喝过, 最开始在酒吧, 凌晨十二点半, 酒吧许是看着没啥生意, 说要打烊了. 于是我和Z君提着两打燕京在学服门口喝到五点, 期间还绕着学校走了一圈, 最后把阿姨叫醒放我们回去睡大觉, 现在想起来还觉得怪不好意思.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-25T13:09:23.639Z">
+<meta property="og:updated_time" content="2019-09-12T16:54:59.063Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode#316 去除重复字母">
-<meta name="twitter:description" content="题面解:思路:总的想法是, 尽量让字典序小的字母靠前出现. 对于字符串cbacdcbc进行遍历, 在已经选择的串为c的情况下考虑第二个字母b, 因为后面仍然有c, 且b的字典序比c小, 删掉现有的c并将b加入选择的串, 这样得到的结果更优(同一个位置字典序小的字母占优, 不论后面的字母如何变幻). 第三个字母同理. 遍历到第四个和第五个字母时, 字典序呈升序, 直接加入结果仍然最优. 遍历第六个字">
+<meta name="twitter:title" content="中秋">
+<meta name="twitter:description" content="现在是2019年中秋最开始的一个小时. 四个小时前, 我, H和Z说趁着小学期结束去喝两杯. 我希望能记录一下, 希望五年或者十年后我还能记得这几个王八蛋酒友. 我和Z君上学期倒是有出来喝过, 最开始在酒吧, 凌晨十二点半, 酒吧许是看着没啥生意, 说要打烊了. 于是我和Z君提着两打燕京在学服门口喝到五点, 期间还绕着学校走了一圈, 最后把阿姨叫醒放我们回去睡大觉, 现在想起来还觉得怪不好意思.">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/08/24/LeetCode-316-去除重复字母/">
+  <link rel="canonical" href="http://yoursite.com/2019/09/13/中秋/">
 
 
 
 
 
-  <title>LeetCode#316 去除重复字母 | SaltyFishL's 个人网站</title>
+  <title>中秋 | SaltyFishL's 个人网站</title>
   
 
 
@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/24/LeetCode-316-去除重复字母/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/13/中秋/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junqi Lu">
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode#316 去除重复字母</h1>
+          <h1 class="post-title" itemprop="name headline">中秋</h1>
         
 
         <div class="post-meta">
@@ -338,8 +338,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-24T20:32:12+08:00">
-                2019-08-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-13T00:15:25+08:00">
+                2019-09-13
               </time>
             
 
@@ -354,34 +354,12 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-08-25T21:09:23+08:00">
-                2019-08-25
+              <time title="Post modified" itemprop="dateModified" datetime="2019-09-13T00:54:59+08:00">
+                2019-09-13
               </time>
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LeetCode/" itemprop="url" rel="index">
-                    <span itemprop="name">LeetCode</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -410,47 +388,11 @@
       
 
       
-        <h2 id="题面"><a href="#题面" class="headerlink" title="题面"></a><a href="https://leetcode-cn.com/problems/remove-duplicate-letters/" target="_blank" rel="noopener">题面</a></h2><h3 id="解"><a href="#解" class="headerlink" title="解:"></a>解:</h3><h4 id="思路"><a href="#思路" class="headerlink" title="思路:"></a>思路:</h4><p>总的想法是, 尽量让字典序小的字母靠前出现.</p>
-<p>对于字符串<code>cbacdcbc</code>进行遍历, 在已经选择的串为<code>c</code>的情况下考虑第二个字母<code>b</code>, 因为后面仍然有<code>c</code>, 且<code>b</code>的字典序比<code>c</code>小, 删掉现有的<code>c</code>并将<code>b</code>加入选择的串, 这样得到的结果更优(同一个位置字典序小的字母占优, 不论后面的字母如何变幻). 第三个字母同理. 遍历到第四个和第五个字母时, 字典序呈升序, 直接加入结果仍然最优. 遍历第六个字母<code>c</code>时, 因为选择结果中已经出现过<code>c</code>, 所以不做处理(<strong>如果需要做处理, 那么就要删除已选择的元素直到至少把之前的那个<code>c</code>删除才能保证字典序不变大. 如果恰好删除到之前的<code>c</code>, 再加入现在的<code>c</code>, 这样的操作就毫无意义. 如果删除了更之前的, 即类似将<code>a</code>替换成了<code>c</code>, 仍然使字典序变大了</strong>). 再到<code>b</code>, 未出现过, 直接加入.</p>
-<p>用StringBuilder代替栈, 方便最后转成字符串.</p>
-<h4 id="算法"><a href="#算法" class="headerlink" title="算法:"></a>算法:</h4><ul>
-<li>初始化<code>int[] count</code>数组, 初始化<code>boolean[] used</code>数组, 初始化存放结果的<code>StringBuilder resSb</code>和<code>LinkedList resList</code></li>
-<li>遍历一遍字符串, 记录每个字母出现的次数, <code>count[s.charAt(i) - &#39;a&#39;]++</code></li>
-<li>遍历字符串, <code>char letter</code>作为当前字符, <code>i</code>为当前索引值.<ul>
-<li><code>count[letter - &#39;a&#39;]--</code></li>
-<li>如果当前字符已经出现在<code>sb</code>中, 即<code>used[letter - &#39;a&#39;] == true</code>, <code>continue</code>.</li>
-<li>当已选择的字串不为空<code>resList.size() &gt; 0</code>, 该字符的字典序小于栈顶的字符<code>letter &lt; resList.getLast()</code>, 且栈顶字符在字符串的后面仍然会出现<code>count[resList.getLast() - &#39;a&#39;] &gt; 0</code><ul>
-<li>更新<code>used[resList.getLast() - &#39;a&#39;] = false</code></li>
-<li>弹出栈顶, <code>resList.removeLast()</code></li>
-<li>循环</li>
-</ul>
-</li>
-<li>添加当前字母, <code>resList.addLast(letter)</code>, <code>used[letter - &#39;a&#39;] = true</code>.</li>
-</ul>
-</li>
-<li>遍历<code>resList</code>, 依次添加入<code>resSb</code>, 返回<code>resSb.toString()</code><h4 id="代码"><a href="#代码" class="headerlink" title="代码:"></a>代码:</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">removeDuplicateLetters</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span>[] count = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">    <span class="keyword">boolean</span>[] used = <span class="keyword">new</span> <span class="keyword">boolean</span>[<span class="number">26</span>];</span><br><span class="line">    StringBuilder resSb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    LinkedList&lt;Character&gt; resList = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        count[s.charAt(i) - <span class="string">'a'</span>]++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">char</span> letter;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">        letter = s.charAt(i);</span><br><span class="line">        count[letter - <span class="string">'a'</span>]--;</span><br><span class="line">        <span class="keyword">if</span> (used[letter - <span class="string">'a'</span>]) &#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (resList.size() &gt; <span class="number">0</span> &amp;&amp; letter &lt; resList.getLast() &amp;&amp; count[resList.getLast() - <span class="string">'a'</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            used[resList.getLast() - <span class="string">'a'</span>] = <span class="keyword">false</span>;</span><br><span class="line">            resList.removeLast();</span><br><span class="line">        &#125;</span><br><span class="line">        resList.addLast(letter);</span><br><span class="line">        used[letter - <span class="string">'a'</span>] = <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (Character character : resList) &#123;</span><br><span class="line">        resSb.append(character);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> resSb.toString();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h4 id="复杂度"><a href="#复杂度" class="headerlink" title="复杂度:"></a>复杂度:</h4><table>
-<thead>
-<tr>
-<th>执行用时</th>
-<th>内存消耗</th>
-<th>语言</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>12ms(51.42%)</td>
-<td>35.7MB(66.07%)</td>
-<td>Java</td>
-</tr>
-</tbody></table>
-<ul>
-<li>时间复杂度 $ O(n) $</li>
-<li>空间复杂度 $ O(n) $</li>
-</ul>
-<hr>
+        <p>现在是2019年中秋最开始的一个小时. 四个小时前, 我, H和Z说趁着小学期结束去喝两杯. 我希望能记录一下, 希望五年或者十年后我还能记得这几个王八蛋酒友.</p>
+<p>我和Z君上学期倒是有出来喝过, 最开始在酒吧, 凌晨十二点半, 酒吧许是看着没啥生意, 说要打烊了. 于是我和Z君提着两打燕京在学服门口喝到五点, 期间还绕着学校走了一圈, 最后把阿姨叫醒放我们回去睡大觉, 现在想起来还觉得怪不好意思. 说起Z君, 虽说一直也相处得挺好, 不过倒是第一次约出来作酒友. 说老实话, Z君和H君那些关于爱情的往事我基本上也知道得八九不离十, 都有过那么些个不堪回首的经历. 总的来说, Z君是痴情男儿, 对远在土澳的那个人念念不忘(或许现在已经慢慢释然), 按他自己的话来说已经无力再爱; H君前几天刚与心结say goodbye, 嘴上说着已经释怀, 但我总觉着还得过一阵子; 而我自己, 早就说过不敢再奢望, 但即使不用看的, 也能嗅到来源于她的特殊味道. 兄弟少年, 都是那么贱兮兮的.</p>
+<p>说起未来, Z君已经联系好导师, 不出意外应该能保上本校的研究生(我觉得Z君应该有更好的出路, 不过这也是后话了). H君和我准备着实习, 大四毕业找工作. 我们谈着至少也得在北京这座城市里奋斗那么五年十年, 还约好谁发文章, 谁拿工资得请请吃饭, 对未来既充满了踌躇有满怀期望, 虽然矛盾但却是当下最真实的想法, 毕竟已经过了大一最迷茫的时刻. </p>
+<p>明天, 不, 今天就是中秋节了. 想起初中高中那会儿, 中秋节还会到湘江边上, 要么到茶摊蹭大人们点的菊花茶, 要么从小贩那买一盏孔明灯点上, 让它承载着我的期望, 随风而去. 离家千万里的现在, 幸好还有亲人在. 不出意外, 十二个小时候应该会和姐姐出去吃顿饭, 说起来, 我们上半年基本没怎么见过, 尽管就在同一个城市. 或许是因为北京城太大, 或许还是因为我们之间的差异太大. 另外我妈也会过来, 该用什么样的心情去面对呢? 随机应变吧, 这事不值得费脑子. </p>
+<p>晚安.</p>
 
       
     </div>
@@ -468,13 +410,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/LeetCode/" rel="tag"># LeetCode</a>
-          
-            <a href="/tags/Java/" rel="tag"># Java</a>
-          
-            <a href="/tags/Algorithms/" rel="tag"># Algorithms</a>
-          
-            <a href="/tags/Stack/" rel="tag"># Stack</a>
+            <a href="/tags/随便聊聊/" rel="tag"># 随便聊聊</a>
           
         </div>
       
@@ -502,8 +438,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/08/24/LeetCode-232-用栈实现队列/" rel="next" title="LeetCode#232 用栈实现队列">
-                <i class="fa fa-chevron-left"></i> LeetCode#232 用栈实现队列
+              <a href="/2019/09/10/数据库小学期实验报告/" rel="next" title="数据库小学期实验">
+                <i class="fa fa-chevron-left"></i> 数据库小学期实验
               </a>
             
           </div>
@@ -511,10 +447,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/27/shell命令基础/" rel="prev" title="shell命令基础">
-                shell命令基础 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -566,17 +498,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -654,22 +577,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#题面"><span class="nav-number">1.</span> <span class="nav-text">题面</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解"><span class="nav-number">1.1.</span> <span class="nav-text">解:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#思路"><span class="nav-number">1.1.1.</span> <span class="nav-text">思路:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#算法"><span class="nav-number">1.1.2.</span> <span class="nav-text">算法:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#代码"><span class="nav-number">1.1.3.</span> <span class="nav-text">代码:</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#复杂度"><span class="nav-number">1.1.4.</span> <span class="nav-text">复杂度:</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
