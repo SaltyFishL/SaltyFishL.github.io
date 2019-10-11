@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[第1章 引论]]></title>
+    <url>%2F2019%2F10%2F10%2F%E7%AC%AC1%E7%AB%A0-%E5%BC%95%E8%AE%BA%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>Modern Operating System</category>
+      </categories>
+      <tags>
+        <tag>Notes</tag>
+        <tag>Operating System</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[中秋]]></title>
     <url>%2F2019%2F09%2F13%2F%E4%B8%AD%E7%A7%8B%2F</url>
     <content type="text"><![CDATA[现在是2019年中秋最开始的一个小时. 四个小时前, 我, H和Z说趁着小学期结束去喝两杯. 我想记录下来, 希望五年或者十年后还能记得这几个王八蛋酒友. 我和Z君上学期倒是有出来喝过, 最开始在酒吧, 凌晨十二点半, 酒吧许是看着没啥生意, 说要打烊了. 于是我和Z君提着两打燕京在学服门口喝到五点, 期间还绕着学校走了一圈, 最后把阿姨叫醒放我们回去睡大觉, 现在想起来还觉得怪不好意思. 说起Z君, 虽说一直也相处得挺好, 不过倒是第一次约出来作酒友. 说老实话, Z君和H君那些关于爱情的往事我基本上也知道得八九不离十, 都有过那么些个不堪回首的经历. 总的来说, Z君是痴情男儿, 对远在土澳的那个人念念不忘(或许现在已经慢慢释然), 按他自己的话来说已经无力再爱; H君前几天刚与心结say goodbye, 嘴上说着已经释怀, 但我总觉着还得过一阵子; 而我自己, 早就说过不敢再奢望, 但即使不用看的, 也能嗅到来源于她的特殊味道. 兄弟少年, 都是那么贱兮兮的. 说起未来, Z君已经联系好导师, 不出意外应该能保上本校的研究生(我觉得Z君应该有更好的出路, 不过这也是后话了). H君和我准备着实习, 大四毕业找工作. 我们谈着至少也得在北京这座城市里奋斗那么五年十年, 还约好谁发文章, 谁拿工资得请请吃饭, 对未来既充满了踌躇有满怀期望, 虽然矛盾但却是当下最真实的想法, 毕竟已经过了大一最迷茫的时刻. 明天, 不, 今天就是中秋节了. 想起初中高中那会儿, 中秋节还会到湘江边上, 要么到茶摊蹭大人们点的菊花茶, 要么从小贩那买一盏孔明灯点上, 让它承载着我的期望, 随风而去. 离家千万里的现在, 幸好还有亲人在. 不出意外, 十二个小时后应该会和姐姐出去吃顿饭, 说起来, 我们上半年基本没怎么见过, 尽管就在同一个城市. 或许是因为北京城太大, 或许是因为我们之间的差异太大. 另外妈妈也会过来, 该用什么样的心情去面对呢? 随机应变吧, 这事不值得费脑子. 晚安.]]></content>
       <tags>
         <tag>随便聊聊</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[数据库小学期实验]]></title>
-    <url>%2F2019%2F09%2F10%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B0%8F%E5%AD%A6%E6%9C%9F%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A%2F</url>
-    <content type="text"><![CDATA[数据库安全性对于登录名的管理创建一个新的windows用户并为设置默认数据库和权限 在本机上添加新的Windows用户 创建新的windows用户登录名 以管理员用户右键点击登录名, 选择新建登录名 选择搜索 在搜索文本框中输入创建用户名称 点击检查名称(名称正确文本框内容会改变) 一路确定下去 切换windows用户, 以新的用户连接数据库. 创建SQL Server登录 修改sa登录名的密码 双击对象资源管理器中登录名的sa 修改密码 修改sa登录名的状态 更改服务器验证方式 重启SQL Server(重要) 在SSMS中连接对象资源管理器, 身份验证选择SQL Server身份验证, 用户名为sa, 密码为之前设置过的密码. SQL Server授权服务器角色和数据库角色SQL Server中的角色类似于Windows中的组. 9个服务器角色从服务器一级定义了对数据库服务器操作的权限. 但这对九个角色的管理只限于给这些角色添加添加或删除成员, 并不能创建新的服务器角色或删除已有的服务器角色, 也不能修改他们中的权限. 所以也称他们为固定服务器角色.在SQL Server 2012之后, 可以创建或删除用户定义的服务器角色, 也可以修改用户定义的服务器角色的权限. 服务器角色和数据库角色的区别: 服务器角色的成员是数据库服务器的登录或者其他服务器角色, 既可以是Windows登录也可以是SQL Server登录. 数据库角色是在数据库一级定义的操作权限, 它针对某一数据库而不是数据库服务器. 123456789-- 图形界面的操作比较直观, 不作展示.-- 在服务器角色sysadmin中添加junqiALTER SERVER ROLE sysadmin ADD MEMBER "DESKTOP-R1LEOLT\junqi"GO-- 在服务器橘色sysadmin删除junqiALTER SERVER ROLE sysadmin DROP MEMBER "DESKTOP-R1LEOLT\junqi"GO 使用数据库角色授权数据库角色授权是将某一数据库的所有对象的某一操作权限授予某一登录. 但这种授权并不是直接将操作权限授予登录, 而是首先将登录映射到某一数据库的某一用户, 再将用户添加到某一数据库角色的成员列表中. 例如, 将登录student映射到数据库testdb中的stu_user用户, 然后再将stu_user添加到db_owner数据库角色列表中. 这样就完成了授予student对testdb数据库的所有操作权限. 12345678910111213-- 创建一个新的登录CREATE LOGIN studentWITH PASSWORD='', DEFAULT_DATABASE=master-- 设置登录在数据库testdb中的用户映射USE testdbGOCREATE USER stu_user FOR LOGIN studentGO-- 将用户stu_user添加到数据库角色db_owner中ALTER ROLE db_owner ADD MEMBER stu_userGO 指定特定对象的授权使用服务器角色是对所有数据库中的所有对象授权, 使用数据库角色是对某一个数据库中的所有对象授权. 当需要对特定的数据库对象进行授权时, 则必须创建应用程序角色或对特定对象进行授权. 新建登录名application, 设置其默认数据库为AdventrueWorks, 设置用户映射到AdventrueWorks. 选择AdventrueWorks的用户, 修改其属性 12345678910111213141516-- 对AdventrueWorks中的表Person.Address进行查询和更新的授权操作CREATE LOGIN applicationWITH PASSWORD='', DEFAULT_DATABASE=AdventrueWorks;GOUSE AdventrueWorks;GOCREATE USER application FOR LOGIN application;GOGRANT SELECT ON Person.Address TO application;GOGRANT UPDATE ON Person.Address(AddressLine1, AddressLine2, City, PostalCode)TO application AS dbo;GO]]></content>
-      <tags>
-        <tag>Database</tag>
-        <tag>小学期</tag>
       </tags>
   </entry>
   <entry>
