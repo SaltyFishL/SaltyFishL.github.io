@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="Notes,Computer Organization,">
 
 
 
@@ -93,17 +93,18 @@
 
 
 
-<meta name="description" content="忘了多可惜">
-<meta name="keywords" content="北京理工大学 BIT 17级 学习中 Android Leetcode 移动开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:url" content="http://yoursite.com/categories/Computer-Networking-A-Top-Down-Approach-7th-Edition/index.html">
+<meta name="description" content="假定有一个长为k位的数据, 要另外添加r个校验位来保证k+r中任何一个数据位出错时, 将影响r个校验位中不同的校验位组合起变化, 此外还需要一个组合来反映正确的情况. 故位数r和k的关系为:$$2^r\geq k+r+1$$汉明码的码距(即从一个合法码变成另一个合法码至少要改变几位码的值)为4. 可以发现并改正一位错, 能发现两位错(但不能改正). 如何为各校验位分配数据位组合(假定$k=3,r=">
+<meta name="keywords" content="Notes,Computer Organization">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CO 汉明码">
+<meta property="og:url" content="http://yoursite.com/2019/10/26/CO-数据表示及检错纠错/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="忘了多可惜">
+<meta property="og:description" content="假定有一个长为k位的数据, 要另外添加r个校验位来保证k+r中任何一个数据位出错时, 将影响r个校验位中不同的校验位组合起变化, 此外还需要一个组合来反映正确的情况. 故位数r和k的关系为:$$2^r\geq k+r+1$$汉明码的码距(即从一个合法码变成另一个合法码至少要改变几位码的值)为4. 可以发现并改正一位错, 能发现两位错(但不能改正). 如何为各校验位分配数据位组合(假定$k=3,r=">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-10-30T14:55:14.620Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SaltyFishL&#39;s 个人网站">
-<meta name="twitter:description" content="忘了多可惜">
+<meta name="twitter:title" content="CO 汉明码">
+<meta name="twitter:description" content="假定有一个长为k位的数据, 要另外添加r个校验位来保证k+r中任何一个数据位出错时, 将影响r个校验位中不同的校验位组合起变化, 此外还需要一个组合来反映正确的情况. 故位数r和k的关系为:$$2^r\geq k+r+1$$汉明码的码距(即从一个合法码变成另一个合法码至少要改变几位码的值)为4. 可以发现并改正一位错, 能发现两位错(但不能改正). 如何为各校验位分配数据位组合(假定$k=3,r=">
 
 
 
@@ -133,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/Computer-Networking-A-Top-Down-Approach-7th-Edition/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/26/CO-数据表示及检错纠错/">
 
 
 
 
 
-  <title>Category: Computer Networking A Top-Down Approach(7th Edition) | SaltyFishL's 个人网站</title>
+  <title>CO 汉明码 | SaltyFishL's 个人网站</title>
   
 
 
@@ -168,7 +169,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -294,53 +295,184 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block category">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Computer Networking A Top-Down Approach(7th Edition)<small>Category</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/26/CO-数据表示及检错纠错/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junqi Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaltyFishL's 个人网站">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2019/08/04/Chapter1-Computer-Networks-and-the-Internet/" itemprop="url">
-              
-                <span itemprop="name">Chapter1 Computer Networks and the Internet</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">CO 汉明码</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-04T00:08:05+08:00" content="2019-08-04">
-          08-04
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-26T14:24:33+08:00">
+                2019-10-26
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2019-10-30T22:55:14+08:00">
+                2019-10-30
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>假定有一个长为k位的数据, 要另外添加r个校验位来保证k+r中任何一个数据位出错时, 将影响r个校验位中不同的校验位组合起变化, 此外还需要一个组合来反映正确的情况. 故位数r和k的关系为:$$2^r\geq k+r+1$$汉明码的码距(即从一个合法码变成另一个合法码至少要改变几位码的值)为4. 可以发现并改正一位错, 能发现两位错(但不能改正).</p>
+<p>如何为各校验位分配数据位组合(假定$k=3,r=4$):<br>$$P1(1), P2(2), D1(3), P3(4), D2(5), D3(6), P4$$</p>
+<ul>
+<li>看数据位编号分别为3, 5, 6, 他们均可表示为校验位编号的组合: $$3=1+2, 5=1+4, 6=2+4$$</li>
+<li>1出现在3和5中, 则校验位P1需要对D1和D2进行校验.</li>
+<li>2出现在3和6中, 则校验位P2需要对D1和D3进行校验.</li>
+<li>4出现在5和6中, 则校验位P3需要对D2和D3进行校验.</li>
+<li>最后用其他各校验位及各数据位进行异或运算求P4的值, 用于区分无错, 奇数位错, 偶数位错三种情况.$\mathrm{P4=P3\bigoplus P2\bigoplus P1\bigoplus D3\bigoplus D2\bigoplus D1}$</li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Notes/" rel="tag"># Notes</a>
+          
+            <a href="/tags/Computer-Organization/" rel="tag"># Computer Organization</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/10/第1章-引论/" rel="next" title="第1章 引论">
+                <i class="fa fa-chevron-left"></i> 第1章 引论
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -348,6 +480,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -587,6 +723,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

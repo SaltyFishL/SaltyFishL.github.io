@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="忘了多可惜">
+<meta name="description" content="用户与操作系统交互的程序, 基于文本的通常称为shell, 而基于图标的则称为图形用户界面(Graphical User Interface), 它们实际上并不是操作系统的一部分. 多数计算机有两种运行模式: 内核态和用户态. 软件中最基础的部分是操作系统, 它运行在内核态(也称为管态, 核心态). 在内核态中, 操作系统具有对所有硬件的完全访问权, 可以执行机器能够运行的任何指令. 软件的其余部">
 <meta name="keywords" content="Notes,Operating System">
 <meta property="og:type" content="article">
 <meta property="og:title" content="第1章 引论">
 <meta property="og:url" content="http://yoursite.com/2019/10/10/第1章-引论/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="忘了多可惜">
+<meta property="og:description" content="用户与操作系统交互的程序, 基于文本的通常称为shell, 而基于图标的则称为图形用户界面(Graphical User Interface), 它们实际上并不是操作系统的一部分. 多数计算机有两种运行模式: 内核态和用户态. 软件中最基础的部分是操作系统, 它运行在内核态(也称为管态, 核心态). 在内核态中, 操作系统具有对所有硬件的完全访问权, 可以执行机器能够运行的任何指令. 软件的其余部">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-10T11:42:40.066Z">
+<meta property="og:updated_time" content="2019-10-12T05:04:54.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第1章 引论">
-<meta name="twitter:description" content="忘了多可惜">
+<meta name="twitter:description" content="用户与操作系统交互的程序, 基于文本的通常称为shell, 而基于图标的则称为图形用户界面(Graphical User Interface), 它们实际上并不是操作系统的一部分. 多数计算机有两种运行模式: 内核态和用户态. 软件中最基础的部分是操作系统, 它运行在内核态(也称为管态, 核心态). 在内核态中, 操作系统具有对所有硬件的完全访问权, 可以执行机器能够运行的任何指令. 软件的其余部">
 
 
 
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2019-10-10T19:42:40+08:00">
-                2019-10-10
+              <time title="Post modified" itemprop="dateModified" datetime="2019-10-12T13:04:54+08:00">
+                2019-10-12
               </time>
             
           </span>
@@ -410,7 +410,16 @@
       
 
       
-        
+        <p>用户与操作系统交互的程序, 基于文本的通常称为<strong>shell</strong>, 而基于图标的则称为<strong>图形用户界面(Graphical User Interface)</strong>, 它们实际上并不是操作系统的一部分.</p>
+<p>多数计算机有两种运行模式: 内核态和用户态. 软件中最基础的部分是操作系统, 它运行在<strong>内核态</strong>(也称为<strong>管态</strong>, <strong>核心态</strong>). 在内核态中, 操作系统具有对所有硬件的完全访问权, 可以执行机器能够运行的<em>任何指令</em>. 软件的其余部分运行再<strong>用户态</strong>下. 在用户态下, 只使用了<em>机器指令的一个子集</em>.</p>
+<p>用户接口程序(shell或者GUI)处于用户态程序中的最低层次, 允许用户运行其他程序(Web浏览器等).</p>
+<p>操作系统运行再裸机之上, 为所有其他软件提供基础的运行环境.</p>
+<h1 id="什么是操作系统"><a href="#什么是操作系统" class="headerlink" title="什么是操作系统"></a>什么是操作系统</h1><p>操作系统有两个基本上独立的任务, 即为应用程序员(实际上是应用程序)提供一个资源集的清晰抽象, 并管理这些硬件资源. 下面逐项进行讨论操作系统的功能.</p>
+<h2 id="作为扩展机器的操作系统"><a href="#作为扩展机器的操作系统" class="headerlink" title="作为扩展机器的操作系统"></a>作为扩展机器的操作系统</h2><p>多数计算机的<strong>体系结构(指令集, 存储组织, I/O和总线结构)</strong>是很原始的, 而且编程时很困难的. </p>
+<p>操作系统的任务就是创建好的抽象, 并实现和管理它所创建的抽象对象.</p>
+<h2 id="作为资源管理者的操作系统"><a href="#作为资源管理者的操作系统" class="headerlink" title="作为资源管理者的操作系统"></a>作为资源管理者的操作系统</h2><p>自顶向下地看, 操作系统向应用程序提供基本抽象. 按照自底向上的观点, 操作系统则用来管理一个复杂系统的各个部分, 其任务是在相互竞争的程序之间有序地控制对处理器, 存储器以及其他I/O接口设备的分配.</p>
+<p>资源管理包括用一下两种不同方式实现<strong>多路复用</strong>(共享)资源: 在时间上复用和在控件上复用. </p>
+
       
     </div>
     
@@ -467,6 +476,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/10/26/CO-数据表示及检错纠错/" rel="prev" title="CO 汉明码">
+                CO 汉明码 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -517,8 +530,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -535,7 +557,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -557,7 +579,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">13</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -596,6 +618,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是操作系统"><span class="nav-number">1.</span> <span class="nav-text">什么是操作系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#作为扩展机器的操作系统"><span class="nav-number">1.1.</span> <span class="nav-text">作为扩展机器的操作系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作为资源管理者的操作系统"><span class="nav-number">1.2.</span> <span class="nav-text">作为资源管理者的操作系统</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
