@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="这里只列出js与其他编程语言不一样的地方, 一样的则不再赘述.  对象方法  123456var object = &amp;#123;    method: function()    &amp;#123;    &amp;#125;&amp;#125;   给尚未声明的变量赋值, 该变量自动作为window的一个属性.  1234567891011121314151617181920var var1 = 1; // 不可配置">
+<meta name="description" content="这里只列出js与其他编程语言不一样的地方, 一样的则不再赘述.  对象方法 123456var object = &amp;#123;    method: function()    &amp;#123;    &amp;#125;&amp;#125;  给尚未声明的变量赋值, 该变量自动作为window的一个属性. 1234567891011121314151617181920var var1 = 1; // 不可配置全局属">
 <meta name="keywords" content="web,javascript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="javascript学习笔记">
 <meta property="og:url" content="http://yoursite.com/2020/01/20/javascript学习笔记/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="这里只列出js与其他编程语言不一样的地方, 一样的则不再赘述.  对象方法  123456var object = &amp;#123;    method: function()    &amp;#123;    &amp;#125;&amp;#125;   给尚未声明的变量赋值, 该变量自动作为window的一个属性.  1234567891011121314151617181920var var1 = 1; // 不可配置">
+<meta property="og:description" content="这里只列出js与其他编程语言不一样的地方, 一样的则不再赘述.  对象方法 123456var object = &amp;#123;    method: function()    &amp;#123;    &amp;#125;&amp;#125;  给尚未声明的变量赋值, 该变量自动作为window的一个属性. 1234567891011121314151617181920var var1 = 1; // 不可配置全局属">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-03T17:26:47.425Z">
+<meta property="og:updated_time" content="2020-02-03T17:44:21.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="javascript学习笔记">
-<meta name="twitter:description" content="这里只列出js与其他编程语言不一样的地方, 一样的则不再赘述.  对象方法  123456var object = &amp;#123;    method: function()    &amp;#123;    &amp;#125;&amp;#125;   给尚未声明的变量赋值, 该变量自动作为window的一个属性.  1234567891011121314151617181920var var1 = 1; // 不可配置">
+<meta name="twitter:description" content="这里只列出js与其他编程语言不一样的地方, 一样的则不再赘述.  对象方法 123456var object = &amp;#123;    method: function()    &amp;#123;    &amp;#125;&amp;#125;  给尚未声明的变量赋值, 该变量自动作为window的一个属性. 1234567891011121314151617181920var var1 = 1; // 不可配置全局属">
 
 
 
@@ -354,7 +354,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-02-04T01:26:47+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-04T01:44:21+08:00">
                 2020-02-04
               </time>
             
@@ -390,110 +390,62 @@
       
         <p>这里只列出js与其他编程语言不一样的地方, 一样的则不再赘述.</p>
 <ol>
-<li>对象方法</li>
-</ol>
+<li><p>对象方法</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> object = &#123;</span><br><span class="line">    method: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>给尚未声明的变量赋值, 该变量自动作为window的一个属性.</li>
-</ol>
+</li>
+<li><p>给尚未声明的变量赋值, 该变量自动作为window的一个属性.</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> var1 = <span class="number">1</span>; <span class="comment">// 不可配置全局属性</span></span><br><span class="line">var2 = <span class="number">2</span>; <span class="comment">// 没有使用 var 声明，可配置全局属性</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">this</span>.var1); <span class="comment">// 1</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">window</span>.var1); <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> var1; <span class="comment">// false 无法删除</span></span><br><span class="line"><span class="built_in">console</span>.log(var1); <span class="comment">//1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">delete</span> var2; </span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">delete</span> var2); <span class="comment">// true</span></span><br><span class="line"><span class="built_in">console</span>.log(var2); <span class="comment">// 已经删除 报错变量未定义</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//---------------carname是全局变量-----------</span></span><br><span class="line"><span class="comment">// 此处可调用 carName 变量</span></span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    carName = <span class="string">"Volvo"</span>;</span><br><span class="line">    <span class="comment">// 此处可调用 carName 变量</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>返回对象名</li>
-</ol>
+</li>
+<li><p>返回对象名</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="string">'abc'</span>;</span><br><span class="line"><span class="keyword">var</span> y = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"john"</span>);</span><br><span class="line"><span class="keyword">typeof</span> x;l</span><br></pre></td></tr></table></figure>
-
-<ol start="4">
+</li>
 <li><p>相等<br><code>switch</code>中的<code>case</code>采用的是<code>===</code>s</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//绝对相等</span><br><span class="line">var x = &quot;a&quot;;</span><br><span class="line">var y = new String(&quot;a&quot;);</span><br><span class="line">(x===y)     //结果为false, 绝对相等属性和类型都要相等</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>js标签</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// label:</span></span><br><span class="line"><span class="comment">// statements</span></span><br><span class="line"></span><br><span class="line">cars=[<span class="string">"BMW"</span>,<span class="string">"Volvo"</span>,<span class="string">"Saab"</span>,<span class="string">"Ford"</span>];</span><br><span class="line">list: </span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">0</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">1</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">2</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="keyword">break</span> list;</span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">3</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">4</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">5</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>null与undefined</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="literal">null</span>;           <span class="comment">// 值为 null(空), 但类型为对象</span></span><br><span class="line"><span class="keyword">var</span> person = <span class="literal">undefined</span>;     <span class="comment">// 值为 undefined, 类型为 undefined</span></span><br><span class="line"><span class="keyword">var</span> person;                  <span class="comment">// 值为 undefined(空), 类型是undefined</span></span><br><span class="line">person = <span class="literal">undefined</span>;          <span class="comment">// 值为 undefined, 类型是undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//值相等但是类型不相等</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>             <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>                  <span class="comment">// object</span></span><br><span class="line"><span class="literal">null</span> === <span class="literal">undefined</span>           <span class="comment">// false</span></span><br><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>            <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//先检测undefined, 再检测null</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> myObj !== <span class="string">"undefined"</span> &amp;&amp; myObj !== <span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>正则表达式<br>/正则表达式主题/修饰符(可选)<br>修饰符:</p>
 </li>
 </ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// label:</span></span><br><span class="line"><span class="comment">// statements</span></span><br><span class="line"></span><br><span class="line">cars=[<span class="string">"BMW"</span>,<span class="string">"Volvo"</span>,<span class="string">"Saab"</span>,<span class="string">"Ford"</span>];</span><br><span class="line">list: </span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">0</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">1</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">2</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="keyword">break</span> list;</span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">3</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">4</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">    <span class="built_in">document</span>.write(cars[<span class="number">5</span>] + <span class="string">"&lt;br&gt;"</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="6">
-<li>null与undefined</li>
-</ol>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="literal">null</span>;           <span class="comment">// 值为 null(空), 但类型为对象</span></span><br><span class="line"><span class="keyword">var</span> person = <span class="literal">undefined</span>;     <span class="comment">// 值为 undefined, 类型为 undefined</span></span><br><span class="line"><span class="keyword">var</span> person;                  <span class="comment">// 值为 undefined(空), 类型是undefined</span></span><br><span class="line">person = <span class="literal">undefined</span>;          <span class="comment">// 值为 undefined, 类型是undefined</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//值相等但是类型不相等</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>             <span class="comment">// undefined</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>                  <span class="comment">// object</span></span><br><span class="line"><span class="literal">null</span> === <span class="literal">undefined</span>           <span class="comment">// false</span></span><br><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>            <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//先检测undefined, 再检测null</span></span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> myObj !== <span class="string">"undefined"</span> &amp;&amp; myObj !== <span class="literal">null</span>)</span><br></pre></td></tr></table></figure>
-
-<ol start="7">
-<li>正则表达式</li>
-</ol>
-<p>/正则表达式主题/修饰符(可选)</p>
-<p>修饰符:</p>
 <ul>
 <li>i: 执行对大小写不敏感的匹配.</li>
 <li>g: 执行全局匹配</li>
 <li>m: 执行多行匹配</li>
 </ul>
 <ol start="8">
-<li>变量提升</li>
-</ol>
-<p>函数声明和变量声明总是会被解释器悄悄地被”提升”到方法体的最顶部。</p>
-<p>JavaScript 只有声明的变量会提升，初始化的不会。</p>
-<ol start="9">
-<li>严格模式</li>
-</ol>
-<p>不允许使用未声明的变量, 不允许删除变量或对象, 不允许删除函数, 不允许变量重名, 不允许使用八进制, 不允许使用转义字符, 不允许对只读属性赋值, 不允许对一个使用getter方法读取的属性进行复制, 不允许删除一个不允许删除的属性, 变量名不能用”eval”, “arguments”, 不允许this指向全局对象</p>
+<li><p>变量提升<br>函数声明和变量声明总是会被解释器悄悄地被”提升”到方法体的最顶部。<br>JavaScript 只有声明的变量会提升，初始化的不会。</p>
+</li>
+<li><p>严格模式<br>不允许使用未声明的变量, 不允许删除变量或对象, 不允许删除函数, 不允许变量重名, 不允许使用八进制, 不允许使用转义字符, 不允许对只读属性赋值, 不允许对一个使用getter方法读取的属性进行复制, 不允许删除一个不允许删除的属性, 变量名不能用”eval”, “arguments”, 不允许this指向全局对象</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">"use strict"</span>    <span class="comment">//只在作用域内有效</span></span><br></pre></td></tr></table></figure>
-
-<ol start="10">
-<li>表单验证</li>
-</ol>
+</li>
+<li><p>表单验证</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">validateForm</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="built_in">document</span>.forms[<span class="string">"myForm"</span>][<span class="string">"fname"</span>].value;</span><br><span class="line">    <span class="keyword">if</span> (x == <span class="literal">null</span> || x == <span class="string">""</span>) &#123;</span><br><span class="line">        alert(<span class="string">"需要输入名字。"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//可以用在onsubmit中</span></span><br></pre></td></tr></table></figure>
-
-<ol start="11">
-<li>let</li>
-</ol>
-<p><code>let</code>声明的变量只在let命令所在的代码块内有效.</p>
-<ol start="12">
-<li>javascript:void(0)</li>
-</ol>
-<p>void()代表不返回任何值, 但是括号里面的表达式还是会进行</p>
-<ol start="13">
-<li>内嵌函数与闭包 (解决计数器困境)</li>
-</ol>
-<p>所有函数都能访问全局变量。  </p>
-<p>实际上，在 JavaScript 中，所有函数都能访问它们上一层的作用域。</p>
-<p>JavaScript 支持嵌套函数。嵌套函数可以访问上一层的函数变量。</p>
+</li>
+<li><p>let<br><code>let</code>声明的变量只在let命令所在的代码块内有效.</p>
+</li>
+<li><p>javascript:void(0)<br>void()代表不返回任何值, 但是括号里面的表达式还是会进行</p>
+</li>
+<li><p>内嵌函数与闭包 (解决计数器困境)<br>所有函数都能访问全局变量。<br>实际上，在 JavaScript 中，所有函数都能访问它们上一层的作用域。<br>JavaScript 支持嵌套函数。嵌套函数可以访问上一层的函数变量。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> add =<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> counter = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">window</span>.alert(<span class="string">"父方法"</span>); <span class="comment">// 只有在 add 赋值时执行一次 </span></span><br><span class="line">    <span class="keyword">return</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">window</span>.alert(<span class="string">"子方法"</span>);  <span class="comment">// 每次执行 add() 都会执行</span></span><br><span class="line">        <span class="keyword">return</span> counter += <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    &#125;    </span><br><span class="line">    <span class="comment">// counter 作用域在父函数中, 自然在其子函数中也能使用,但因为</span></span><br><span class="line">    <span class="comment">// 子函数还需要使用了count, 所以 count 不随着父函数一起释放。    </span></span><br><span class="line">    <span class="comment">// 利用在 function()&#123;&#125;() 的形式自动执行一遍父匿名函数, 赋给 add 子方法。</span></span><br><span class="line">&#125;();</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">myFunction</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>).innerHTML = add();  <span class="comment">//这里add()执行的就是子方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="14">
-<li>JavaScript HTML DOM(Document Object Model)</li>
+</li>
+<li><p>JavaScript HTML DOM(Document Object Model)<br>EventListener, 监听事件.<br>addEventListener() 方法添加的事件句柄不会覆盖已存在的事件句柄。<br>可以向一个元素添加多个事件句柄。<br>可以向同个元素添加多个同类型的事件句柄，如：两个 “click” 事件。<br>可以向任何 DOM 对象添加事件监听，不仅仅是 HTML 元素。如： window 对象。<br>addEventListener() 方法可以更简单的控制事件（冒泡与捕获）。<br>当使用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 在没有控制HTML标记时也可以添加事件监听。<br>可以使用 removeEventListener() 方法来移除事件的监听。</p>
+</li>
+<li><p>事件冒泡或事件捕获<br>事件传递有两种方式：冒泡与捕获。<br>事件传递定义了元素事件触发的顺序。 如果你将 </p><p> 元素插入到 <div> 元素中，用户点击 <p> 元素, 哪个元素的 “click” 事件先被触发呢？<br>在<strong>冒泡</strong>中，内部元素的事件会先被触发，然后再触发外部元素，即： </p><p> 元素的点击事件先触发，然后会触发 <div> 元素的点击事件。<br>在<strong>捕获</strong>中，外部元素的事件会先被触发，然后才会触发内部元素的事件，即： <div> 元素的点击事件先触发 ，然后再触发 <p> 元素的点击事件。<br>addEventListener() 方法可以指定 “useCapture” 参数来设置传递类型：false为冒泡传递, true为捕获传递.</p>
+</div></div></p></div></p></li>
+<li><p>BOM<br>浏览器对象模型(Browser Objdect Model)</p>
+</li>
 </ol>
-<p>EventListener, 监听事件.</p>
-<p>addEventListener() 方法添加的事件句柄不会覆盖已存在的事件句柄。</p>
-<p>可以向一个元素添加多个事件句柄。</p>
-<p>可以向同个元素添加多个同类型的事件句柄，如：两个 “click” 事件。</p>
-<p>可以向任何 DOM 对象添加事件监听，不仅仅是 HTML 元素。如： window 对象。</p>
-<p>addEventListener() 方法可以更简单的控制事件（冒泡与捕获）。</p>
-<p>当使用 addEventListener() 方法时, JavaScript 从 HTML 标记中分离开来，可读性更强， 在没有控制HTML标记时也可以添加事件监听。</p>
-<p>可以使用 removeEventListener() 方法来移除事件的监听。</p>
-<ol start="15">
-<li>事件冒泡或事件捕获<br>事件传递有两种方式：冒泡与捕获。</li>
-</ol>
-<p>事件传递定义了元素事件触发的顺序。 如果你将 </p><p> 元素插入到 <div> 元素中，用户点击 <p> 元素, 哪个元素的 “click” 事件先被触发呢？</p>
-<p>在<strong>冒泡</strong>中，内部元素的事件会先被触发，然后再触发外部元素，即： </p><p> 元素的点击事件先触发，然后会触发 <div> 元素的点击事件。</div></p>
-<p>在<strong>捕获</strong>中，外部元素的事件会先被触发，然后才会触发内部元素的事件，即： <div> 元素的点击事件先触发 ，然后再触发 <p> 元素的点击事件。</p>
-<p>addEventListener() 方法可以指定 “useCapture” 参数来设置传递类型：false为冒泡传递, true为捕获传递.</p>
-<ol start="16">
-<li>BOM</li>
-</ol>
-<p>浏览器对象模型(Browser Objdect Model)</p>
-<p><strong>Window对象</strong>表示浏览器窗口, 包括HTML DOM的document也是window对象的属性之一: <code>window.document.getElementById(&quot;header&quot;)</code></p>
-<p><strong>计时事件</strong></p>
+<p><strong>Window对象</strong>表示浏览器窗口, 包括HTML DOM的document也是window对象的属性之一: <code>window.document.getElementById(&quot;header&quot;)</code><br><strong>计时事件</strong></p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.setInterval(<span class="function"><span class="keyword">function</span>, <span class="title">milliseconds</span>)</span></span><br><span class="line"><span class="function"><span class="title">window</span>.<span class="title">clearInterval</span>(<span class="params">intervalVariable</span>)</span></span><br><span class="line"><span class="function"><span class="title">window</span>.<span class="title">setTimeout</span>(<span class="params">function, milliseconds</span>)</span></span><br><span class="line"><span class="function"><span class="title">window</span>.<span class="title">clearTimeout</span>(<span class="params">timeoutVariable</span>)</span></span><br></pre></td></tr></table></figure>
 
 <ol start="17">
-<li>Cookie</li>
+<li>Cookie<br>Cookie用于存储web页面的用户信息.<br>Cookie以键值对的形式存储, <code>username = John Doe</code><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">cname,cvalue,exdays</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  d.setTime(d.getTime()+(exdays*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>));</span><br><span class="line">  <span class="keyword">var</span> expires = <span class="string">"expires="</span>+d.toGMTString();</span><br><span class="line">  <span class="built_in">document</span>.cookie = cname + <span class="string">"="</span> + cvalue + <span class="string">"; "</span> + expires;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">cname</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = cname + <span class="string">"="</span>;</span><br><span class="line">  <span class="keyword">var</span> ca = <span class="built_in">document</span>.cookie.split(<span class="string">';'</span>);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;ca.length; i++) </span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">var</span> c = ca[i].trim();</span><br><span class="line">    <span class="keyword">if</span> (c.indexOf(name)==<span class="number">0</span>) <span class="keyword">return</span> c.substring(name.length,c.length);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkCookie</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> user=getCookie(<span class="string">"username"</span>);</span><br><span class="line">    <span class="keyword">if</span> (user!=<span class="string">""</span>)&#123;</span><br><span class="line">        alert(<span class="string">"欢迎 "</span> + user + <span class="string">" 再次访问"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        user = prompt(<span class="string">"请输入你的名字:"</span>,<span class="string">""</span>);</span><br><span class="line">          <span class="keyword">if</span> (user!=<span class="string">""</span> &amp;&amp; user!=<span class="literal">null</span>)&#123;</span><br><span class="line">            setCookie(<span class="string">"username"</span>,user,<span class="number">30</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ol>
-<p>Cookie用于存储web页面的用户信息. </p>
-<p>Cookie以键值对的形式存储, <code>username = John Doe</code></p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setCookie</span>(<span class="params">cname,cvalue,exdays</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> d = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">  d.setTime(d.getTime()+(exdays*<span class="number">24</span>*<span class="number">60</span>*<span class="number">60</span>*<span class="number">1000</span>));</span><br><span class="line">  <span class="keyword">var</span> expires = <span class="string">"expires="</span>+d.toGMTString();</span><br><span class="line">  <span class="built_in">document</span>.cookie = cname + <span class="string">"="</span> + cvalue + <span class="string">"; "</span> + expires;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getCookie</span>(<span class="params">cname</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">var</span> name = cname + <span class="string">"="</span>;</span><br><span class="line">  <span class="keyword">var</span> ca = <span class="built_in">document</span>.cookie.split(<span class="string">';'</span>);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;ca.length; i++) </span><br><span class="line">  &#123;</span><br><span class="line">    <span class="keyword">var</span> c = ca[i].trim();</span><br><span class="line">    <span class="keyword">if</span> (c.indexOf(name)==<span class="number">0</span>) <span class="keyword">return</span> c.substring(name.length,c.length);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">checkCookie</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> user=getCookie(<span class="string">"username"</span>);</span><br><span class="line">    <span class="keyword">if</span> (user!=<span class="string">""</span>)&#123;</span><br><span class="line">        alert(<span class="string">"欢迎 "</span> + user + <span class="string">" 再次访问"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        user = prompt(<span class="string">"请输入你的名字:"</span>,<span class="string">""</span>);</span><br><span class="line">          <span class="keyword">if</span> (user!=<span class="string">""</span> &amp;&amp; user!=<span class="literal">null</span>)&#123;</span><br><span class="line">            setCookie(<span class="string">"username"</span>,user,<span class="number">30</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-</div></p></div></p>
       
     </div>
     
