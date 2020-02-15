@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon-64x64.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-48x48.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-32x32.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/favicon-128x128.png?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="web,ThinkJS,node.js,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="1. 入门1.1 安装$ npm install -g think-cli 1.2 卸载$ npm uninstall -g thinkjs 1.3 创建项目1234$ thinkjs new demo;$ cd demo;$ npm install; $ npm start;  1.4 项目结构1234567891011121314151617181920212223242526|--- dev">
+<meta name="keywords" content="web,ThinkJS,node.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ThinkJS学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/02/07/ThinkJS学习笔记/index.html">
+<meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
+<meta property="og:description" content="1. 入门1.1 安装$ npm install -g think-cli 1.2 卸载$ npm uninstall -g thinkjs 1.3 创建项目1234$ thinkjs new demo;$ cd demo;$ npm install; $ npm start;  1.4 项目结构1234567891011121314151617181920212223242526|--- dev">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-02-09T00:14:00.687Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ThinkJS学习笔记">
+<meta name="twitter:description" content="1. 入门1.1 安装$ npm install -g think-cli 1.2 卸载$ npm uninstall -g thinkjs 1.3 创建项目1234$ thinkjs new demo;$ cd demo;$ npm install; $ npm start;  1.4 项目结构1234567891011121314151617181920212223242526|--- dev">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/02/07/ThinkJS学习笔记/">
+
+
+
+
+
+  <title>ThinkJS学习笔记 | SaltyFishL's 个人网站</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?c849d1d8b6b4dc3a40d43884f12e456f";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">SaltyFishL's 个人网站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="Searching..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/07/ThinkJS学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junqi Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaltyFishL's 个人网站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ThinkJS学习笔记</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-07T23:13:37+08:00">
+                2020-02-07
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-09T08:14:00+08:00">
+                2020-02-09
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="1-入门"><a href="#1-入门" class="headerlink" title="1. 入门"></a>1. 入门</h2><h3 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1 安装"></a>1.1 安装</h3><p><code>$ npm install -g think-cli</code></p>
+<h3 id="1-2-卸载"><a href="#1-2-卸载" class="headerlink" title="1.2 卸载"></a>1.2 卸载</h3><p><code>$ npm uninstall -g thinkjs</code></p>
+<h3 id="1-3-创建项目"><a href="#1-3-创建项目" class="headerlink" title="1.3 创建项目"></a>1.3 创建项目</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> thinkjs new demo;</span><br><span class="line"><span class="meta">$</span> cd demo;</span><br><span class="line"><span class="meta">$</span> npm install; </span><br><span class="line"><span class="meta">$</span> npm start;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-项目结构"><a href="#1-4-项目结构" class="headerlink" title="1.4 项目结构"></a>1.4 项目结构</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">|--- development.js   //开发环境下的入口文件</span><br><span class="line">|--- nginx.conf  //nginx 配置文件</span><br><span class="line">|--- package.json</span><br><span class="line">|--- pm2.json //pm2 配置文件</span><br><span class="line">|--- production.js //生产环境下的入口文件</span><br><span class="line">|--- README.md</span><br><span class="line">|--- src</span><br><span class="line">| |--- bootstrap  //启动自动执行目录 </span><br><span class="line">| | |--- master.js //Master 进程下自动执行</span><br><span class="line">| | |--- worker.js //Worker 进程下自动执行</span><br><span class="line">| |--- config  //配置文件目录</span><br><span class="line">| | |--- adapter.js  // adapter 配置文件 </span><br><span class="line">| | |--- config.js  // 默认配置文件 </span><br><span class="line">| | |--- config.production.js  //生产环境下的默认配置文件，和 config.js 合并 </span><br><span class="line">| | |--- extend.js  //extend 配置文件 </span><br><span class="line">| | |--- middleware.js //middleware 配置文件 </span><br><span class="line">| | |--- router.js //自定义路由配置文件</span><br><span class="line">| |--- controller  //控制器目录 </span><br><span class="line">| | |--- base.js</span><br><span class="line">| | |--- index.js</span><br><span class="line">| |--- logic //logic 目录</span><br><span class="line">| | |--- index.js</span><br><span class="line">| |--- model //模型目录</span><br><span class="line">| | |--- index.js</span><br><span class="line">|--- view  //模板目录</span><br><span class="line">| |--- index_index.html</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-config-配置"><a href="#2-config-配置" class="headerlink" title="2. config/配置"></a>2. config/配置</h2><p>ThinkJS将所有的配置都统一管理, 文件都放在<code>src/congig/</code>目录下(多模块项目放在<code>src/common/config/</code>), 并根据不同的功能划分为不同的配置文件.</p>
+<ul>
+<li><code>config.js</code> 通用的一些配置</li>
+<li><code>adapter.js</code> adapter 配置</li>
+<li><code>router.js</code> 自定义路由配置</li>
+<li><code>middleware.js</code> middlware 配置</li>
+<li><code>validator.js</code> 数据校验配置</li>
+<li><code>extend.js</code> extend 配置</li>
+</ul>
+<h3 id="2-1-多环境配置"><a href="#2-1-多环境配置" class="headerlink" title="2.1 多环境配置"></a>2.1 多环境配置</h3><p>有些配置需要在不同的环境下配置不同的值，如：数据库的配置在开发环境和生产环境是不一样的，此时可以通过环境下对应不同的配置文件来完成。</p>
+<p>多环境配置文件格式为：[name].[env].js，如：config.development.js，config.production.js</p>
+<p>在以上的配置文件中，目前只有 config.js 和 adapter.js 是支持不同环境配置文件的。</p>
+<h3 id="2-2-使用配置"><a href="#2-2-使用配置" class="headerlink" title="2.2 使用配置"></a>2.2 使用配置</h3><ul>
+<li>在 ctx 中, 可以通过<code>ctx.config(key)</code>来获取配置</li>
+<li>在controller 中, 可以通过<code>controller.config(key)</code>来获取配置</li>
+<li>在其他情况下, 可以通过<code>think.config(key)</code>来获取配置</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> redis = ctx.config(<span class="string">'redis'</span>); <span class="comment">//获取 redis 配置</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">think</span>.<span class="title">Controller</span> </span>&#123;</span><br><span class="line">  indexAction() &#123;</span><br><span class="line">    <span class="keyword">const</span> redis = <span class="keyword">this</span>.config(<span class="string">'redis'</span>); <span class="comment">// 在 controller 中通过 this.config 获取配置</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-3-动态配置设置"><a href="#2-3-动态配置设置" class="headerlink" title="2.3 动态配置设置"></a>2.3 动态配置设置</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/bootstrap/worker.js</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//HTTP 服务启动前执行</span></span><br><span class="line">think.beforeStartServer(<span class="keyword">async</span> () =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> config = <span class="keyword">await</span> think.model(<span class="string">'config'</span>).select();</span><br><span class="line">  think.config(<span class="string">'userConfig'</span>, config); <span class="comment">//从数据库中将配置读取出来，然后设置</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-Context-上下文"><a href="#3-Context-上下文" class="headerlink" title="3. Context/上下文"></a>3. Context/上下文</h2><p>thinkJS的context应该是从koa那边来的. koa Context就是将node的<code>request</code>和<code>response</code>对象封装到单个对象中, 为编写Web应用程序和API提供了许多有用的方法. 这些操作在HTTP服务器中频繁使用. 很多 context 实例的访问器（getter, setter）和方法都是对 Request 和 Response 中属性/方法的简单映射，目的就是为了方便开发。之所以要把这些方法扩展到 context 实例上，而没有做更高层次的封装，目的是为了提高性能，降低在 middleware 中实例中再次实例 Request/Response 的成本。</p>
+<p>koa中<strong>每个</strong>请求都将创建一个<code>context</code>, 并在中间件中作为接收器引用, 或者<code>ctx</code>标识符.</p>
+<p>Context 是 Koa 中处理用户请求中的一个对象，贯穿整个请求生命周期。一般在 middleware、controller、logic 中使用，简称为 <code>ctx</code>。</p>
+<h2 id="4-Middleware-中间件"><a href="#4-Middleware-中间件" class="headerlink" title="4. Middleware/中间件"></a>4. Middleware/中间件</h2><p>首先要明确一点, 在koa中, 所有关于HTTP请求的事情都是在中间件内部完成的, 最重要的则是理解<strong>中间件延续传递</strong>的概念. 它的思想是, 一旦中间件完成了它的事情, 它可以选择调用链中的下一个中间件.</p>
+<h3 id="4-1-中间件格式"><a href="#4-1-中间件格式" class="headerlink" title="4.1 中间件格式"></a>4.1 中间件格式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="function"><span class="params">options</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">ctx, next</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>中间件格式为一个高阶函数，外部的函数接收一个 <code>options</code> 参数，这样方便中间件提供一些配置信息，用来开启/关闭一些功能。执行后返回另一个函数，这个函数接收 <code>ctx</code>, <code>next</code> 参数，其中 <code>ctx</code> 为 <code>context</code> 的简写，是当前请求生命周期的一个对象，存储了当前请求的一些相关信息，<code>next</code> 为调用后续的中间件，返回值是 <code>Promise</code>，这样可以很方便的处理后置逻辑。</p>
+<h2 id="5-Logic"><a href="#5-Logic" class="headerlink" title="5. Logic"></a>5. Logic</h2><p>当在 Action 里处理用户的请求时，经常要先获取用户提交过来的数据，然后对其校验，如果校验没问题后才能进行后续的操作；当参数校验完成后，有时候还要进行权限判断等，这些都判断无误后才能进行真正的逻辑处理。如果将这些代码都放在一个 Action 里，势必让 Action 的代码非常复杂且冗长。</p>
+<p>为了解决这个问题， ThinkJS 在控制器前面增加了一层 <code>Logic</code>，Logic 里的 Action 和控制器里的 Action 一一对应，系统在调用控制器里的 Action 之前会自动调用 Logic 里的 Action。</p>
+<p><code>Logic</code> 目录在 <code>src/[module]/logic</code>，在项目根目录通过命令 <code>thinkjs controller test</code> 会创建名为 test 的 Controller 同时会自动创建对应的 Logic。<strong>若自己手工创建时，Logic 文件名和 Controller 文件名要相同</strong></p>
+<p>Logic代码如下:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = <span class="class"><span class="keyword">class</span> <span class="keyword">extends</span> <span class="title">think</span>.<span class="title">Logic</span> </span>&#123;</span><br><span class="line"> __before() &#123;</span><br><span class="line">    <span class="comment">// todo</span></span><br><span class="line"> &#125;</span><br><span class="line"> indexAction() &#123;</span><br><span class="line">    <span class="comment">// todo</span></span><br><span class="line"> &#125;</span><br><span class="line"> __after() &#123;</span><br><span class="line">    <span class="comment">// todo</span></span><br><span class="line"> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-Controller-控制器"><a href="#6-Controller-控制器" class="headerlink" title="6. Controller/控制器"></a>6. Controller/控制器</h2><p>MVC 模型中，控制器是用户请求的逻辑处理部分。比如：将用户相关的操作都放在 <code>user.js</code> 里，每一个操作就是里面一个Action。</p>
+<p>可以通过执行命令 thinkjs controller xxx [module]来添加controller，其中xxx为controller名称，而[module]为多模块项目中的项目名称，这时系统将自动完成controller与对应logic文件的创建，并且初始化其内容。</p>
+<h2 id="7-View-视图"><a href="#7-View-视图" class="headerlink" title="7. View/视图"></a>7. View/视图</h2><h2 id="8-Router-路由"><a href="#8-Router-路由" class="headerlink" title="8. Router/路由"></a>8. Router/路由</h2><p>在 ThinkJS 中，当用户访问一个 URL 时，最后是通过 <code>controller</code> 里具体的 <code>action</code> 来响应的。所以就需要解析出 URL 对应的 <code>controller</code> 和 <code>action</code>，这个解析工作是通过 think-router 模块实现的。</p>
+<p>think-router 是一个 middleware，项目创建时默认已经加到配置文件 src/config/middleware.js 里了，其中 options 支持如下的参数：</p>
+<ul>
+<li><code>defaultModule</code> {String} 多模块项目下，默认的模块名。默认值为 <code>home</code></li>
+<li><code>defaultController</code> {String} 默认的控制器名，默认值为 <code>index</code></li>
+<li><code>defaultAction</code> {String} 默认的操作名，默认值为 <code>index</code></li>
+<li><code>prefix</code> {Array} 默认去除的 pathname 前缀，默认值为 <code>[]</code></li>
+<li><code>suffix</code> {Array} 默认去除的 pathname 后缀，默认值为 <code>[&#39;.html&#39;]</code></li>
+<li><code>enableDefaultRouter</code> {Boolean} 在不匹配情况下是否使用默认路由解析，默认值为 <code>true</code></li>
+<li><code>optimizeHomepageRouter</code> {Boolean} 是否对首页进行优化，默认值为 <code>true</code>（开启后如果访问地址是首页，那么不会进行自定义路由匹配）</li>
+<li><code>subdomainOffset</code> {Number} 子域名映射下的偏移量，默认值为 <code>2</code></li>
+<li><code>subdomain</code> {Object|Array} 子域名映射列表，默认为 <code>{}</code></li>
+<li><code>denyModules</code> {Array} 多模块项目下，禁止访问的模块列表，默认为 <code>[]</code><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><a href="https://thinkjs.org/doc/index.html" target="_blank" rel="noopener">thinkJS官方文档</a><br><a href="https://www.dazhuanlan.com/2019/09/28/5d8eadac83a57/" target="_blank" rel="noopener">koa-Context</a><br><a href="https://hijiangtao.github.io/2017/11/10/Mastering-Koa-Middleware/" target="_blank" rel="noopener">[译] 掌握 Koa 中间件</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/ThinkJS/" rel="tag"># ThinkJS</a>
+          
+            <a href="/tags/node-js/" rel="tag"># node.js</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/06/Cesium-CZML学习笔记/" rel="next" title="卫星轨道CZML学习笔记">
+                <i class="fa fa-chevron-left"></i> 卫星轨道CZML学习笔记
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/09/关于node-js中的exports-module-exports和export-export-default/" rel="prev" title="关于node.js中的exports和module.exports">
+                关于node.js中的exports和module.exports <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.gif" alt="Junqi Lu">
+            
+              <p class="site-author-name" itemprop="name">Junqi Lu</p>
+              <p class="site-description motion-element" itemprop="description">忘了多可惜</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">23</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/SaltyFishL" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:jq_lu@outlook.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-入门"><span class="nav-number">1.</span> <span class="nav-text">1. 入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-安装"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-卸载"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 卸载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-创建项目"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 创建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-项目结构"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 项目结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-config-配置"><span class="nav-number">2.</span> <span class="nav-text">2. config/配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-多环境配置"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 多环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-使用配置"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 使用配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-动态配置设置"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 动态配置设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Context-上下文"><span class="nav-number">3.</span> <span class="nav-text">3. Context/上下文</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Middleware-中间件"><span class="nav-number">4.</span> <span class="nav-text">4. Middleware/中间件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-中间件格式"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 中间件格式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Logic"><span class="nav-number">5.</span> <span class="nav-text">5. Logic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-Controller-控制器"><span class="nav-number">6.</span> <span class="nav-text">6. Controller/控制器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-View-视图"><span class="nav-number">7.</span> <span class="nav-text">7. View/视图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Router-路由"><span class="nav-number">8.</span> <span class="nav-text">8. Router/路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">9.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Junqi Lu</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+      pbOptions = {};
+      
+          pbOptions.iconStyle = "box";
+      
+          pbOptions.boxForm = "horizontal";
+      
+          pbOptions.position = "bottomCenter";
+      
+          pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+  </script>
+
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  
+
+
+  
+
+  
+
+</body>
+</html>
