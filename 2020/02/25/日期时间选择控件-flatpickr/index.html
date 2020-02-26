@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="web,jquery,">
 
 
 
@@ -93,17 +93,20 @@
 
 
 
-<meta name="description" content="忘了多可惜">
-<meta name="keywords" content="北京理工大学 BIT 17级 学习中 Android Leetcode 移动开发">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:url" content="http://yoursite.com/tags/webstorm/index.html">
+<meta name="description" content="项目中需要用到时间选择器, 最开始找到的是bootstrap datetimepicker. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不">
+<meta name="keywords" content="web,jquery">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日期时间选择控件-flatpickr">
+<meta property="og:url" content="http://yoursite.com/2020/02/25/日期时间选择控件-flatpickr/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="忘了多可惜">
+<meta property="og:description" content="项目中需要用到时间选择器, 最开始找到的是bootstrap datetimepicker. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20200226135425.png">
+<meta property="og:updated_time" content="2020-02-26T05:54:43.406Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SaltyFishL&#39;s 个人网站">
-<meta name="twitter:description" content="忘了多可惜">
+<meta name="twitter:title" content="日期时间选择控件-flatpickr">
+<meta name="twitter:description" content="项目中需要用到时间选择器, 最开始找到的是bootstrap datetimepicker. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20200226135425.png">
 
 
 
@@ -133,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/webstorm/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/25/日期时间选择控件-flatpickr/">
 
 
 
 
 
-  <title>Tag: webstorm | SaltyFishL's 个人网站</title>
+  <title>日期时间选择控件-flatpickr | SaltyFishL's 个人网站</title>
   
 
 
@@ -168,7 +171,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -294,52 +297,182 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>webstorm<small>Tag</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/25/日期时间选择控件-flatpickr/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Junqi Lu">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/uploads/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="SaltyFishL's 个人网站">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/" itemprop="url">
-              
-                <span itemprop="name">webstorm中静态资源文件夹配置以及eslintrc的配置</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">日期时间选择控件-flatpickr</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2020-02-11T05:19:18+08:00" content="2020-02-11">
-          02-11
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-25T18:42:04+08:00">
+                2020-02-25
+              </time>
+            
 
-    </header>
-  </article>
+            
+              <span class="post-meta-divider">|</span>
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Post modified&#58;</span>
+              
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-26T13:54:43+08:00">
+                2020-02-26
+              </time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>项目中需要用到时间选择器, 最开始找到的是<a href="https://www.bootcss.com/p/bootstrap-datetimepicker/" target="_blank" rel="noopener">bootstrap datetimepicker</a>. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不再更新.</p>
+<p>然后经过一番寻找, 找到了这次的主角, <a href="https://github.com/flatpickr/flatpickr" target="_blank" rel="noopener">flatpickr</a>. 在我初期的使用过程中, 已知的优点有:</p>
+<ul>
+<li>支持时分秒的人性化选择.</li>
+<li>支持import(这里鞭尸layui, 属实不行)</li>
+<li>轻量. 下图说明了使用jQuery UI、Bootstrap、packadate.js和flatpickr拉齐制作一个日期时间选择器时，所需要的文件尺寸大小：<img src="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20200226135425.png" alt></li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/web/" rel="tag"># web</a>
+          
+            <a href="/tags/jquery/" rel="tag"># jquery</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div id="needsharebutton-postbottom">
+            <span class="btn">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+            </span>
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/22/暗影精灵3-拆机换风扇/" rel="next" title="暗影精灵3 拆机换风扇">
+                <i class="fa fa-chevron-left"></i> 暗影精灵3 拆机换风扇
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -347,6 +480,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -579,6 +716,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
