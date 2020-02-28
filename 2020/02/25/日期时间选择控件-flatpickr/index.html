@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="web,jquery,">
+  <meta name="keywords" content="web,">
 
 
 
@@ -94,7 +94,7 @@
 
 
 <meta name="description" content="项目中需要用到时间选择器, 最开始找到的是bootstrap datetimepicker. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不">
-<meta name="keywords" content="web,jquery">
+<meta name="keywords" content="web">
 <meta property="og:type" content="article">
 <meta property="og:title" content="日期时间选择控件-flatpickr">
 <meta property="og:url" content="http://yoursite.com/2020/02/25/日期时间选择控件-flatpickr/index.html">
@@ -102,7 +102,7 @@
 <meta property="og:description" content="项目中需要用到时间选择器, 最开始找到的是bootstrap datetimepicker. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20200226135425.png">
-<meta property="og:updated_time" content="2020-02-26T05:54:43.406Z">
+<meta property="og:updated_time" content="2020-02-27T15:40:34.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="日期时间选择控件-flatpickr">
 <meta name="twitter:description" content="项目中需要用到时间选择器, 最开始找到的是bootstrap datetimepicker. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不">
@@ -356,8 +356,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-02-26T13:54:43+08:00">
-                2020-02-26
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-27T23:40:34+08:00">
+                2020-02-27
               </time>
             
           </span>
@@ -391,12 +391,127 @@
 
       
         <p>项目中需要用到时间选择器, 最开始找到的是<a href="https://www.bootcss.com/p/bootstrap-datetimepicker/" target="_blank" rel="noopener">bootstrap datetimepicker</a>. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不再更新.</p>
-<p>然后经过一番寻找, 找到了这次的主角, <a href="https://github.com/flatpickr/flatpickr" target="_blank" rel="noopener">flatpickr</a>. 在我初期的使用过程中, 已知的优点有:</p>
+<p>然后经过一番寻找, 找到了这次的主角, <a href="https://flatpickr.js.org/" target="_blank" rel="noopener">flatpickr</a>. 在我初期的使用过程中, 已知的优点有:</p>
 <ul>
 <li>支持时分秒的人性化选择.</li>
 <li>支持import(这里鞭尸layui, 属实不行)</li>
 <li>轻量. 下图说明了使用jQuery UI、Bootstrap、packadate.js和flatpickr拉齐制作一个日期时间选择器时，所需要的文件尺寸大小：<img src="https://raw.githubusercontent.com/SaltyFishL/picBed/master/20200226135425.png" alt></li>
 </ul>
+<h2 id="如何开始"><a href="#如何开始" class="headerlink" title="如何开始"></a>如何开始</h2><p>这里只展示一种, 其他的可以自行上官网查看.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://cdn.jsdelivr.net/npm/flatpickr"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在html文件的<code>&lt;head&gt;</code>中包含这两行.</p>
+<p><code>&lt;input class=flatpickr&gt;</code></p>
+<p>如果有jQuery的话, </p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'#id'</span>).flatpickr(optional_config);</span><br></pre></td></tr></table></figure>
+
+<p>如果没有,</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">flatpickr(element, &#123;optional_config&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>这里的配置替代上面的optional_config即可.</p>
+<table>
+<thead>
+<tr>
+<th>配置</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>enableTime</td>
+<td>boolean</td>
+<td>是否允许输入时和分</td>
+</tr>
+<tr>
+<td>enableSeconds</td>
+<td>boolean</td>
+<td>是否允许输入秒</td>
+</tr>
+<tr>
+<td>dateFormat</td>
+<td>string</td>
+<td><code>&lt;input&gt;</code>中<code>value</code>的时间的格式</td>
+</tr>
+<tr>
+<td>locale</td>
+<td>string</td>
+<td>本地化配置, 具体看<a href="https://flatpickr.js.org/localization/" target="_blank" rel="noopener">这</a></td>
+</tr>
+<tr>
+<td>altInput</td>
+<td>boolean</td>
+<td>是否启用altFormat, 且开启后显示更加贴近原生bootstrap</td>
+</tr>
+<tr>
+<td>altFormat</td>
+<td>string</td>
+<td><code>&lt;input&gt;</code>中实际显示在网页上的格式</td>
+</tr>
+<tr>
+<td>defaultDate</td>
+<td>Date(), Timestamps, ISO string, Date String, ‘today’</td>
+<td>默认时间, 其中Date String必须和dateFormat相匹配, 可以是仅前n项匹配</td>
+</tr>
+<tr>
+<td>minDate</td>
+<td>同上</td>
+<td>可选择最小时间</td>
+</tr>
+<tr>
+<td>maxDate</td>
+<td>同上</td>
+<td>可选择最大时间</td>
+</tr>
+<tr>
+<td>disable</td>
+<td>array</td>
+<td>禁选时间, 每项的类型同上, 另外可以是范围<code>{from:&quot;&quot;, to:&quot;&quot;}</code>, 也可以是函数`function(date){return date.getDay()===0}</td>
+</tr>
+<tr>
+<td>enable</td>
+<td>array</td>
+<td>与disable相反</td>
+</tr>
+<tr>
+<td>mode</td>
+<td>string</td>
+<td>‘multiple’多选, ‘range’范围</td>
+</tr>
+<tr>
+<td>conjunction</td>
+<td>string</td>
+<td>多选模式下的分隔符</td>
+</tr>
+<tr>
+<td>enableSeconds</td>
+<td>boolean</td>
+<td>是否允许输入秒</td>
+</tr>
+<tr>
+<td>time_24hr</td>
+<td>boolean</td>
+<td>是否24小时制</td>
+</tr>
+<tr>
+<td>noCalendar</td>
+<td>boolean</td>
+<td>是否不允许日历</td>
+</tr>
+<tr>
+<td>inline</td>
+<td>boolean</td>
+<td>默认显示选择框</td>
+</tr>
+<tr>
+<td>wrap</td>
+<td>boolean</td>
+<td>是否允许扩展</td>
+</tr>
+</tbody></table>
+<p>wrap用法:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"flatpickr"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"Select Date.."</span> <span class="attr">data-input</span>&gt;</span> <span class="comment">&lt;!-- input is mandatory --&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"input-button"</span> <span class="attr">title</span>=<span class="string">"toggle"</span> <span class="attr">data-toggle</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"icon-calendar"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">class</span>=<span class="string">"input-button"</span> <span class="attr">title</span>=<span class="string">"clear"</span> <span class="attr">data-clear</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">i</span> <span class="attr">class</span>=<span class="string">"icon-close"</span>&gt;</span><span class="tag">&lt;/<span class="name">i</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>更高端的用法, 例如事件之类的可以上官网去看. 总的来说还是非常不错的, 又好看又好用, 不亏github上12k star.<br>用字符串对日期进行格式化时, <a href="https://flatpickr.js.org/formatting/" target="_blank" rel="noopener">参考文件</a>.</p>
 
       
     </div>
@@ -415,8 +530,6 @@
         <div class="post-tags">
           
             <a href="/tags/web/" rel="tag"># web</a>
-          
-            <a href="/tags/jquery/" rel="tag"># jquery</a>
           
         </div>
       
@@ -453,6 +566,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/02/27/CesiumWidget-Scene结构/" rel="prev" title="CesiumWidget--Scene结构">
+                CesiumWidget--Scene结构 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -504,8 +621,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -522,7 +648,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">26</span>
+                  <span class="site-state-item-count">30</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -583,6 +709,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#如何开始"><span class="nav-number">1.</span> <span class="nav-text">如何开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

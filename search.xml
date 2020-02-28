@@ -1,12 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[日期时间选择控件-flatpickr]]></title>
-    <url>%2F2020%2F02%2F25%2F%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E6%8E%A7%E4%BB%B6-flatpickr%2F</url>
-    <content type="text"><![CDATA[项目中需要用到时间选择器, 最开始找到的是bootstrap datetimepicker. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不再更新. 然后经过一番寻找, 找到了这次的主角, flatpickr. 在我初期的使用过程中, 已知的优点有: 支持时分秒的人性化选择. 支持import(这里鞭尸layui, 属实不行) 轻量. 下图说明了使用jQuery UI、Bootstrap、packadate.js和flatpickr拉齐制作一个日期时间选择器时，所需要的文件尺寸大小：]]></content>
+    <title><![CDATA[bootstrap table控件]]></title>
+    <url>%2F2020%2F02%2F27%2Fbootstrap-table%E6%8E%A7%E4%BB%B6%2F</url>
+    <content type="text"><![CDATA[官方网站 快速开始这里只介绍使用cdn的方式获取. 在html文件的&lt;head&gt;中包括下面的代码. 12&lt;!-- Latest compiled and minified CSS --&gt;&lt;link rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"&gt; 在html文件的&lt;/body&gt;前, jquery的js文件之后引入下面的代码. 1234&lt;!-- Latest compiled and minified JavaScript --&gt;&lt;script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"&gt;&lt;/script&gt;&lt;!-- Latest compiled and minified Locales --&gt;&lt;script src="https://unpkg.com/bootstrap-table@1.16.0/dist/locale/bootstrap-table-zh-CN.min.js"&gt;&lt;/script&gt;]]></content>
       <tags>
         <tag>web</tag>
-        <tag>jquery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Cesium sandcastle中没有Development分组怎么办]]></title>
+    <url>%2F2020%2F02%2F27%2FCesium-sandcastle%E4%B8%AD%E6%B2%A1%E6%9C%89Development%E5%88%86%E7%BB%84%E6%80%8E%E4%B9%88%E5%8A%9E%2F</url>
+    <content type="text"><![CDATA[从官网下载了编译好的包, 是不能直接使用npm build的. 我在网上找了一些资料, 添加了app/文件夹下的两个文件后可以正常的打包, 但是在sandcastle中却没有出现development分组. 找了资料后发现是只有源码打包后才会出现这个分组. 那么就只能从github上clone到本地, 或者从release中下载源代码到本地. 这样再经过npm build就可以看到development分组了. 此外还有另外几个关于打包的命令可以看参考资料中第二个链接. 参考资料Cesium打包命令Cesium打包命令总结]]></content>
+      <tags>
+        <tag>web</tag>
+        <tag>cesium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Cesium Model图元]]></title>
+    <url>%2F2020%2F02%2F27%2FCesium-Model%E5%9B%BE%E5%85%83%2F</url>
+    <content type="text"><![CDATA[如何添加model到primitives12345model = scene.primitives.add(Cesium.Model.fromGltf(&#123; url : url, modelMatrix : modelMatrix, minimumPixelSize : 128&#125;)); url位gltf文件的位置, modelMatrix用来控制位置, 姿态等参数. 用var modelMatrix = Cesium.Transforms.headingPitchRollToFixedFrame(origin, hpr);来创建modelMatrix. origin是以地球中心为原点, 以本初子午线与赤道交点方向为x轴, 朝向北极为z轴, y轴根据左手坐标系建系规则建立(大致指向亚洲). 直接求origin是很复杂的, 那么如何简化呢, 用var origin = Cesium.Cartesian3.fromDegrees(-123.0744619, 44.0503706, height);根据经纬度以及高度来确定origin即可, 例子坐标为西经123度, 北纬44度, 高度为height. headingPitchRoll为欧拉角(三个角度用来确定物体的朝向). 初始方向为朝向正东. heading指的是头左右的摆动, pitch指的是头上下摆动, roll则指的是绕视线方向的旋转变换. 初始方向为正朝东方. 如何加载model在创建model对象并加入primitives后, 并不能直接在scene中加载出model对象.model.readyPromise.then()便是异步准备好model对象, 并在then()中执行回调函数. 如何选择12345678var handler = new Cesium.ScreenSpaceEventHandler(scene.canvas);handler.setInputAction(function(movement) &#123; var pick = scene.pick(movement.endPosition); if (Cesium.defined(pick) &amp;&amp; Cesium.defined(pick.node) &amp;&amp; Cesium.defined(pick.mesh)) &#123; // Output glTF node and mesh under the mouse. console.log('node: ' + pick.node.name + '. mesh: ' + pick.mesh.name); &#125;&#125;, Cesium.ScreenSpaceEventType.MOUSE_MOVE); 上述例子实现的是在scene的画布上选择鼠标移动时的点对应的对象, 并进行了简单的判断.]]></content>
+      <tags>
+        <tag>web</tag>
+        <tag>cesium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CesiumWidget--Scene结构]]></title>
+    <url>%2F2020%2F02%2F27%2FCesiumWidget-Scene%E7%BB%93%E6%9E%84%2F</url>
+    <content type="text"><![CDATA[CesiumWidget内部创建的对象主要有clock, container, canvas, screenSpaceEventHandler, scene几个部分.clock用来记录时间. container则是构造函数的参数, 也就是传入的div. canvas则是在container上构建的Canvas类对象, 可以据此获取WebGL绘制的画笔. screenSpaceEventHandler则是对Canvas对象上各种鼠标的交互事件的封装, 方便传递给三维场景. scene则承载着整个三维场景中的对象. Scene装载了所有的图元(三维对象)Scene中有一些内置的图元对象: golbe(地球), skyBox(天空盒), sun(太阳), moon(月亮)等等. 另外还有两个用来由用户自行控制存放对象的数组: primitives和groundPrimitives(完全贴合地面). 可以将Model对象(gITF), Billboards/Labels/Points, Primitive(包括集合体Geometry和覆盖集合体的外观Appeance), ViewportQuad等添加到primitives中.]]></content>
+      <tags>
+        <tag>web</tag>
+        <tag>cesium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[日期时间选择控件-flatpickr]]></title>
+    <url>%2F2020%2F02%2F25%2F%E6%97%A5%E6%9C%9F%E6%97%B6%E9%97%B4%E9%80%89%E6%8B%A9%E6%8E%A7%E4%BB%B6-flatpickr%2F</url>
+    <content type="text"><![CDATA[项目中需要用到时间选择器, 最开始找到的是bootstrap datetimepicker. 但是出现了几个问题, 一是这个控件虽然支持time显示时分秒, 但是实际上可以选择的最小单位只到了分; 二是time选择器默认是隔五分钟给一个选项, 当然可以修改, 但是也是类似于按钮选择, 不够人性化, 且如果step过小, 比如一分钟, 所显示出来的button就非常多了; 三是该项目已经封存了, 不再更新. 然后经过一番寻找, 找到了这次的主角, flatpickr. 在我初期的使用过程中, 已知的优点有: 支持时分秒的人性化选择. 支持import(这里鞭尸layui, 属实不行) 轻量. 下图说明了使用jQuery UI、Bootstrap、packadate.js和flatpickr拉齐制作一个日期时间选择器时，所需要的文件尺寸大小： 如何开始这里只展示一种, 其他的可以自行上官网查看. 12&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"&gt;&lt;script src="https://cdn.jsdelivr.net/npm/flatpickr"&gt;&lt;/script&gt; 在html文件的&lt;head&gt;中包含这两行. &lt;input class=flatpickr&gt; 如果有jQuery的话, 1$('#id').flatpickr(optional_config); 如果没有, 1flatpickr(element, &#123;optional_config&#125;); 配置这里的配置替代上面的optional_config即可. 配置 类型 说明 enableTime boolean 是否允许输入时和分 enableSeconds boolean 是否允许输入秒 dateFormat string &lt;input&gt;中value的时间的格式 locale string 本地化配置, 具体看这 altInput boolean 是否启用altFormat, 且开启后显示更加贴近原生bootstrap altFormat string &lt;input&gt;中实际显示在网页上的格式 defaultDate Date(), Timestamps, ISO string, Date String, ‘today’ 默认时间, 其中Date String必须和dateFormat相匹配, 可以是仅前n项匹配 minDate 同上 可选择最小时间 maxDate 同上 可选择最大时间 disable array 禁选时间, 每项的类型同上, 另外可以是范围{from:&quot;&quot;, to:&quot;&quot;}, 也可以是函数`function(date){return date.getDay()===0} enable array 与disable相反 mode string ‘multiple’多选, ‘range’范围 conjunction string 多选模式下的分隔符 enableSeconds boolean 是否允许输入秒 time_24hr boolean 是否24小时制 noCalendar boolean 是否不允许日历 inline boolean 默认显示选择框 wrap boolean 是否允许扩展 wrap用法: 1234567891011&lt;div class="flatpickr"&gt; &lt;input type="text" placeholder="Select Date.." data-input&gt; &lt;!-- input is mandatory --&gt; &lt;a class="input-button" title="toggle" data-toggle&gt; &lt;i class="icon-calendar"&gt;&lt;/i&gt; &lt;/a&gt; &lt;a class="input-button" title="clear" data-clear&gt; &lt;i class="icon-close"&gt;&lt;/i&gt; &lt;/a&gt;&lt;/div&gt; 更高端的用法, 例如事件之类的可以上官网去看. 总的来说还是非常不错的, 又好看又好用, 不亏github上12k star.用字符串对日期进行格式化时, 参考文件.]]></content>
+      <tags>
+        <tag>web</tag>
       </tags>
   </entry>
   <entry>
