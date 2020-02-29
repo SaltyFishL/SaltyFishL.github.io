@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
 <meta property="og:description" content="要实现的功能需要实现一个能绕着地球按指定轨道运行, 可调整俯仰角的卫星, 使其能搭载可控制开关的相机, 相机需要设置角度. 分工 使用TLE数据获得实时的卫星经纬度.这块内容和cesium的关系不大. 但是需要了解两个东西, 第一个是TLE(两行轨道数据), 这里提供两个参考: TLE（两行轨道数据）卫星行李数据格式解析, 卫星轨道和两行数据TLE. 最终的结果是能够做到输入时间, 得到该时间对应">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-29T09:47:35.017Z">
+<meta property="og:updated_time" content="2020-02-29T09:52:47.950Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="卫星模块分工">
 <meta name="twitter:description" content="要实现的功能需要实现一个能绕着地球按指定轨道运行, 可调整俯仰角的卫星, 使其能搭载可控制开关的相机, 相机需要设置角度. 分工 使用TLE数据获得实时的卫星经纬度.这块内容和cesium的关系不大. 但是需要了解两个东西, 第一个是TLE(两行轨道数据), 这里提供两个参考: TLE（两行轨道数据）卫星行李数据格式解析, 卫星轨道和两行数据TLE. 最终的结果是能够做到输入时间, 得到该时间对应">
@@ -354,7 +354,7 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-02-29T17:47:35+08:00">
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-29T17:52:47+08:00">
                 2020-02-29
               </time>
             
@@ -396,7 +396,7 @@
 <li>手写: 这个不到万不得已, 还是不要用了, 实在没办法也建议另行google找找其他解决方案, 要是还是不行, 我在网上也找到了一个思路: <a href="http://tieba.baidu.com/p/5723931679" target="_blank" rel="noopener">请问我有一个卫星的TLE数据，怎么换算成当前时间当前位置的高</a></li>
 </ul>
 </li>
-<li>创建卫星模型, 使用cesium的clock实现实时改变位置(精度纬度高度), 用浏览器中input的数据使第一个模型的姿态发生变化.<br>这里的卫星模型使用cesium的model来实现. 位置和姿态用modelMartrix来指定. 参考资料可以看<a href="https://ke.qq.com/webcourse/index.html?from=share_qq_chat#cid=1049504&term_id=101145523&taid=5856909463651232&vid=5285890798757129092" target="_blank" rel="noopener">cesium-model图元讲解</a>, 该视频以sandcastle中的一个例子简单地介绍了如何创建model, 如何修改model的modelMatrix, 以及一些坐标系转换的方法. 另外也需要先看看第一个视频scene, 对cesium的架构有一个简单的认识. 以上部分属于静态内容. 下面需要实现的是通过cesium的clock实现model的位置变化. 第一个参考是sandcastle中的Time Dynamic Wheels例子, 第二个参考是<a href="http://www.bubuko.com/infodetail-2963842.html" target="_blank" rel="noopener">cesium 实时传参更新模型的位置和姿态</a>, 其他的资料可以在网上找找.<br>在这一小块中, 位置和姿态可自行任意设置, 留出参数存放1中抛出来数据即可.</li>
+<li>创建卫星模型, 使用cesium的clock实现实时改变位置(经度纬度高度), 用浏览器中input的数据使模型的姿态发生变化.<br>这里的卫星模型使用cesium的model来实现. 位置和姿态用modelMartrix来指定. 参考资料可以看<a href="https://ke.qq.com/webcourse/index.html?from=share_qq_chat#cid=1049504&term_id=101145523&taid=5856909463651232&vid=5285890798757129092" target="_blank" rel="noopener">cesium-model图元讲解</a>, 该视频以sandcastle中的一个例子简单地介绍了如何创建model, 如何修改model的modelMatrix, 以及一些坐标系转换的方法. 另外也需要先看看第一个视频scene, 对cesium的架构有一个简单的认识. 以上部分属于静态内容. 下面需要实现的是通过cesium的clock实现model的位置变化. 第一个参考是sandcastle中的Time Dynamic Wheels例子, 第二个参考是<a href="http://www.bubuko.com/infodetail-2963842.html" target="_blank" rel="noopener">cesium 实时传参更新模型的位置和姿态</a>, 其他的资料可以在网上找找.<br>在这一小块中, 位置和姿态可自行任意设置, 留出参数存放1中抛出来数据即可.</li>
 <li>给定经纬高, 以该点与地心的连线为轴, 创建一个四个侧面顶角都为4.5°的模型. 同时要求该模型可改变位置(方便接下来和卫星的绑定, 这里不要求改变姿态, 也不要求随clock改变).<br>这一块应该要用到Cesium的primitive图元. 这里是视频教程地址: <a href="https://ke.qq.com/webcourse/index.html?from=share_qq_chat#cid=1049504&term_id=101145523&taid=5856918053585824&vid=5285890798757129076" target="_blank" rel="noopener">primitive图元的讲解</a>, 另外可以看看groundPrimitive图元, 貌似能实现贴地的效果. 这是一个groundPrimitive的参考, <a href="https://www.cnblogs.com/fuckgiser/p/6216050.html" target="_blank" rel="noopener">Cesium原理篇：GroundPrimitive</a>.<br>这块的经纬高(卫星的位置)可以自行指定. 此外也看看第一节scene, 便于理解cesium的结构.</li>
 </ol>
 <h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>我们这块用的主要是scene下面的东西, 这块自定义比较强. viewer, entity这块集成度比较高, 自定义方便没这么强. 但实际上呈现出来的效果是没啥差别的.</p>
