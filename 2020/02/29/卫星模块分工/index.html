@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="web,webstorm,">
+  <meta name="keywords" content="web,cesium,">
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="为了解决eslint一部分报错, 需要将配置一下.eslintrc文件: 123456789101112131415&amp;#123;  &amp;quot;extends&amp;quot;: &amp;quot;think&amp;quot;,  &amp;quot;env&amp;quot;: &amp;#123;    &amp;quot;node&amp;quot;: true,    &amp;quot;browser&amp;quot;: true,    &amp;quot;es6">
-<meta name="keywords" content="web,webstorm">
+<meta name="description" content="要实现的功能需要实现一个能绕着地球按指定轨道运行, 可调整俯仰角的卫星, 使其能搭载可控制开关的相机, 相机需要设置角度. 分工 使用TLE数据获得实时的卫星经纬度.这块内容和cesium的关系不大. 但是需要了解两个东西, 第一个是TLE(两行轨道数据), 这里提供两个参考: TLE（两行轨道数据）卫星行李数据格式解析, 卫星轨道和两行数据TLE. 最终的结果是能够做到输入时间, 得到该时间对应">
+<meta name="keywords" content="web,cesium">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webstorm中静态资源文件夹配置以及eslintrc的配置">
-<meta property="og:url" content="http://yoursite.com/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/index.html">
+<meta property="og:title" content="卫星模块分工">
+<meta property="og:url" content="http://yoursite.com/2020/02/29/卫星模块分工/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="为了解决eslint一部分报错, 需要将配置一下.eslintrc文件: 123456789101112131415&amp;#123;  &amp;quot;extends&amp;quot;: &amp;quot;think&amp;quot;,  &amp;quot;env&amp;quot;: &amp;#123;    &amp;quot;node&amp;quot;: true,    &amp;quot;browser&amp;quot;: true,    &amp;quot;es6">
+<meta property="og:description" content="要实现的功能需要实现一个能绕着地球按指定轨道运行, 可调整俯仰角的卫星, 使其能搭载可控制开关的相机, 相机需要设置角度. 分工 使用TLE数据获得实时的卫星经纬度.这块内容和cesium的关系不大. 但是需要了解两个东西, 第一个是TLE(两行轨道数据), 这里提供两个参考: TLE（两行轨道数据）卫星行李数据格式解析, 卫星轨道和两行数据TLE. 最终的结果是能够做到输入时间, 得到该时间对应">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-15T07:46:57.062Z">
+<meta property="og:updated_time" content="2020-02-29T09:47:35.017Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webstorm中静态资源文件夹配置以及eslintrc的配置">
-<meta name="twitter:description" content="为了解决eslint一部分报错, 需要将配置一下.eslintrc文件: 123456789101112131415&amp;#123;  &amp;quot;extends&amp;quot;: &amp;quot;think&amp;quot;,  &amp;quot;env&amp;quot;: &amp;#123;    &amp;quot;node&amp;quot;: true,    &amp;quot;browser&amp;quot;: true,    &amp;quot;es6">
+<meta name="twitter:title" content="卫星模块分工">
+<meta name="twitter:description" content="要实现的功能需要实现一个能绕着地球按指定轨道运行, 可调整俯仰角的卫星, 使其能搭载可控制开关的相机, 相机需要设置角度. 分工 使用TLE数据获得实时的卫星经纬度.这块内容和cesium的关系不大. 但是需要了解两个东西, 第一个是TLE(两行轨道数据), 这里提供两个参考: TLE（两行轨道数据）卫星行李数据格式解析, 卫星轨道和两行数据TLE. 最终的结果是能够做到输入时间, 得到该时间对应">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/29/卫星模块分工/">
 
 
 
 
 
-  <title>webstorm中静态资源文件夹配置以及eslintrc的配置 | SaltyFishL's 个人网站</title>
+  <title>卫星模块分工 | SaltyFishL's 个人网站</title>
   
 
 
@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/29/卫星模块分工/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junqi Lu">
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">webstorm中静态资源文件夹配置以及eslintrc的配置</h1>
+          <h1 class="post-title" itemprop="name headline">卫星模块分工</h1>
         
 
         <div class="post-meta">
@@ -338,8 +338,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-11T05:19:18+08:00">
-                2020-02-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-29T16:29:01+08:00">
+                2020-02-29
               </time>
             
 
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-02-15T15:46:57+08:00">
-                2020-02-15
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-29T17:47:35+08:00">
+                2020-02-29
               </time>
             
           </span>
@@ -388,10 +388,19 @@
       
 
       
-        <p>为了解决eslint一部分报错, 需要将配置一下<code>.eslintrc</code>文件:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;extends&quot;: &quot;think&quot;,</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;node&quot;: true,</span><br><span class="line">    &quot;browser&quot;: true,</span><br><span class="line">    &quot;es6&quot;: true,</span><br><span class="line">    &quot;jquery&quot;: true</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;rules&quot;: &#123;</span><br><span class="line">    &quot;no-console&quot;: &quot;off&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;globals&quot;: &#123;</span><br><span class="line">    &quot;layui&quot;: true</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在webstorm中将某个文件夹设为静态资源访问文件夹为, 在webstorm中右键文件夹-&gt;Make directory as-&gt;Resource Root</p>
+        <h2 id="要实现的功能"><a href="#要实现的功能" class="headerlink" title="要实现的功能"></a>要实现的功能</h2><p>需要实现一个能绕着地球按指定轨道运行, 可调整俯仰角的卫星, 使其能搭载可控制开关的相机, 相机需要设置角度.</p>
+<h2 id="分工"><a href="#分工" class="headerlink" title="分工"></a>分工</h2><ol>
+<li>使用TLE数据获得实时的卫星经纬度.<br>这块内容和cesium的关系不大. 但是需要了解两个东西, 第一个是TLE(两行轨道数据), 这里提供两个参考: <a href="https://blog.csdn.net/haochajin/article/details/83095447" target="_blank" rel="noopener">TLE（两行轨道数据）卫星行李数据格式解析</a>, <a href="https://www.cnblogs.com/rainbow70626/p/6012162.html" target="_blank" rel="noopener">卫星轨道和两行数据TLE</a>. 最终的结果是能够做到输入时间, 得到该时间对应的经度, 纬度, 高度(对, 这块是没有姿态角变化的). 如何算, 这里提供三种思路:<ul>
+<li><a href="https://www.npmjs.com/package/sgp4" target="_blank" rel="noopener">npm中的sgp4框架</a>: 这个如果可以用应该是最简单的. 这个框架的资料我暂时没找到太多, 需要靠自己找找资料. 但是他参考的是python的sgp4框架, 这个我在项目的<code>www/static/py/TLE2CZML.py</code>中用到了, 我想接口可能不会相差太多. <a href="https://www.jsdelivr.com/package/npm/sgp4" target="_blank" rel="noopener">这</a>是该框架jsdelivr上的网页.</li>
+<li><a href="https://github.com/koansys/isat" target="_blank" rel="noopener">github上开源的一个项目</a>: 这个项目说实话我没仔细看, 但是他确实是用js和sgp4实现了经纬度的计算. 问题是项目的文件架构不太明白, 可能doc里面有说明, 如果没有可以试着google看能不能找到解释. </li>
+<li>手写: 这个不到万不得已, 还是不要用了, 实在没办法也建议另行google找找其他解决方案, 要是还是不行, 我在网上也找到了一个思路: <a href="http://tieba.baidu.com/p/5723931679" target="_blank" rel="noopener">请问我有一个卫星的TLE数据，怎么换算成当前时间当前位置的高</a></li>
+</ul>
+</li>
+<li>创建卫星模型, 使用cesium的clock实现实时改变位置(精度纬度高度), 用浏览器中input的数据使第一个模型的姿态发生变化.<br>这里的卫星模型使用cesium的model来实现. 位置和姿态用modelMartrix来指定. 参考资料可以看<a href="https://ke.qq.com/webcourse/index.html?from=share_qq_chat#cid=1049504&term_id=101145523&taid=5856909463651232&vid=5285890798757129092" target="_blank" rel="noopener">cesium-model图元讲解</a>, 该视频以sandcastle中的一个例子简单地介绍了如何创建model, 如何修改model的modelMatrix, 以及一些坐标系转换的方法. 另外也需要先看看第一个视频scene, 对cesium的架构有一个简单的认识. 以上部分属于静态内容. 下面需要实现的是通过cesium的clock实现model的位置变化. 第一个参考是sandcastle中的Time Dynamic Wheels例子, 第二个参考是<a href="http://www.bubuko.com/infodetail-2963842.html" target="_blank" rel="noopener">cesium 实时传参更新模型的位置和姿态</a>, 其他的资料可以在网上找找.<br>在这一小块中, 位置和姿态可自行任意设置, 留出参数存放1中抛出来数据即可.</li>
+<li>给定经纬高, 以该点与地心的连线为轴, 创建一个四个侧面顶角都为4.5°的模型. 同时要求该模型可改变位置(方便接下来和卫星的绑定, 这里不要求改变姿态, 也不要求随clock改变).<br>这一块应该要用到Cesium的primitive图元. 这里是视频教程地址: <a href="https://ke.qq.com/webcourse/index.html?from=share_qq_chat#cid=1049504&term_id=101145523&taid=5856918053585824&vid=5285890798757129076" target="_blank" rel="noopener">primitive图元的讲解</a>, 另外可以看看groundPrimitive图元, 貌似能实现贴地的效果. 这是一个groundPrimitive的参考, <a href="https://www.cnblogs.com/fuckgiser/p/6216050.html" target="_blank" rel="noopener">Cesium原理篇：GroundPrimitive</a>.<br>这块的经纬高(卫星的位置)可以自行指定. 此外也看看第一节scene, 便于理解cesium的结构.</li>
+</ol>
+<h2 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h2><p>我们这块用的主要是scene下面的东西, 这块自定义比较强. viewer, entity这块集成度比较高, 自定义方便没这么强. 但实际上呈现出来的效果是没啥差别的.</p>
+<h2 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h2><p>这里给出Cesium1.62的<a href="http://cesium.xin/cesium/cn/Documentation1.62/Model.html" target="_blank" rel="noopener">中文文档</a>. 有总比没有强.</p>
 
       
     </div>
@@ -411,7 +420,7 @@
           
             <a href="/tags/web/" rel="tag"># web</a>
           
-            <a href="/tags/webstorm/" rel="tag"># webstorm</a>
+            <a href="/tags/cesium/" rel="tag"># cesium</a>
           
         </div>
       
@@ -439,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/09/关于node-js中的exports-module-exports和export-export-default/" rel="next" title="关于exports和module.exports">
-                <i class="fa fa-chevron-left"></i> 关于exports和module.exports
+              <a href="/2020/02/29/Cesium-primitive图元/" rel="next" title="Cesium-primitive图元">
+                <i class="fa fa-chevron-left"></i> Cesium-primitive图元
               </a>
             
           </div>
@@ -448,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/17/thinkjs中的跳转/" rel="prev" title="thinkjs中的a跳转">
-                thinkjs中的a跳转 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -503,8 +508,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -582,6 +596,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#要实现的功能"><span class="nav-number">1.</span> <span class="nav-text">要实现的功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分工"><span class="nav-number">2.</span> <span class="nav-text">分工</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#补充"><span class="nav-number">3.</span> <span class="nav-text">补充</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文档"><span class="nav-number">4.</span> <span class="nav-text">文档</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

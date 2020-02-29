@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="web,webstorm,">
+  <meta name="keywords" content="web,cesium,">
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="为了解决eslint一部分报错, 需要将配置一下.eslintrc文件: 123456789101112131415&amp;#123;  &amp;quot;extends&amp;quot;: &amp;quot;think&amp;quot;,  &amp;quot;env&amp;quot;: &amp;#123;    &amp;quot;node&amp;quot;: true,    &amp;quot;browser&amp;quot;: true,    &amp;quot;es6">
-<meta name="keywords" content="web,webstorm">
+<meta name="description" content="影像也是图元的一种. 其层次关系为 Primitives-&amp;gt;Globe-&amp;gt;ImageryLayers. 这部分对应sandcastle中Imagery Layers示例. 影像对应的变量为layers = viewer.scene.imageryLayers. 可以加载很多不同的影像, 即给地球穿上很多不同的表皮. 这里的layers属于Cesium.ImageryLayerColle">
+<meta name="keywords" content="web,cesium">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webstorm中静态资源文件夹配置以及eslintrc的配置">
-<meta property="og:url" content="http://yoursite.com/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/index.html">
+<meta property="og:title" content="Cesium-影像加载">
+<meta property="og:url" content="http://yoursite.com/2020/02/29/Cesium-地形影像加载/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="为了解决eslint一部分报错, 需要将配置一下.eslintrc文件: 123456789101112131415&amp;#123;  &amp;quot;extends&amp;quot;: &amp;quot;think&amp;quot;,  &amp;quot;env&amp;quot;: &amp;#123;    &amp;quot;node&amp;quot;: true,    &amp;quot;browser&amp;quot;: true,    &amp;quot;es6">
+<meta property="og:description" content="影像也是图元的一种. 其层次关系为 Primitives-&amp;gt;Globe-&amp;gt;ImageryLayers. 这部分对应sandcastle中Imagery Layers示例. 影像对应的变量为layers = viewer.scene.imageryLayers. 可以加载很多不同的影像, 即给地球穿上很多不同的表皮. 这里的layers属于Cesium.ImageryLayerColle">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-15T07:46:57.062Z">
+<meta property="og:updated_time" content="2020-02-29T03:55:12.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webstorm中静态资源文件夹配置以及eslintrc的配置">
-<meta name="twitter:description" content="为了解决eslint一部分报错, 需要将配置一下.eslintrc文件: 123456789101112131415&amp;#123;  &amp;quot;extends&amp;quot;: &amp;quot;think&amp;quot;,  &amp;quot;env&amp;quot;: &amp;#123;    &amp;quot;node&amp;quot;: true,    &amp;quot;browser&amp;quot;: true,    &amp;quot;es6">
+<meta name="twitter:title" content="Cesium-影像加载">
+<meta name="twitter:description" content="影像也是图元的一种. 其层次关系为 Primitives-&amp;gt;Globe-&amp;gt;ImageryLayers. 这部分对应sandcastle中Imagery Layers示例. 影像对应的变量为layers = viewer.scene.imageryLayers. 可以加载很多不同的影像, 即给地球穿上很多不同的表皮. 这里的layers属于Cesium.ImageryLayerColle">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/29/Cesium-地形影像加载/">
 
 
 
 
 
-  <title>webstorm中静态资源文件夹配置以及eslintrc的配置 | SaltyFishL's 个人网站</title>
+  <title>Cesium-影像加载 | SaltyFishL's 个人网站</title>
   
 
 
@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/29/Cesium-地形影像加载/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junqi Lu">
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">webstorm中静态资源文件夹配置以及eslintrc的配置</h1>
+          <h1 class="post-title" itemprop="name headline">Cesium-影像加载</h1>
         
 
         <div class="post-meta">
@@ -338,8 +338,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-11T05:19:18+08:00">
-                2020-02-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-29T11:32:13+08:00">
+                2020-02-29
               </time>
             
 
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-02-15T15:46:57+08:00">
-                2020-02-15
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-29T11:55:12+08:00">
+                2020-02-29
               </time>
             
           </span>
@@ -388,10 +388,11 @@
       
 
       
-        <p>为了解决eslint一部分报错, 需要将配置一下<code>.eslintrc</code>文件:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;extends&quot;: &quot;think&quot;,</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;node&quot;: true,</span><br><span class="line">    &quot;browser&quot;: true,</span><br><span class="line">    &quot;es6&quot;: true,</span><br><span class="line">    &quot;jquery&quot;: true</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;rules&quot;: &#123;</span><br><span class="line">    &quot;no-console&quot;: &quot;off&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;globals&quot;: &#123;</span><br><span class="line">    &quot;layui&quot;: true</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在webstorm中将某个文件夹设为静态资源访问文件夹为, 在webstorm中右键文件夹-&gt;Make directory as-&gt;Resource Root</p>
+        <p>影像也是图元的一种. 其层次关系为 Primitives-&gt;Globe-&gt;ImageryLayers.</p>
+<p>这部分对应sandcastle中Imagery Layers示例.</p>
+<p>影像对应的变量为<code>layers = viewer.scene.imageryLayers</code>. 可以加载很多不同的影像, 即给地球穿上很多不同的表皮. 这里的<code>layers</code>属于<code>Cesium.ImageryLayerCollection</code>类, 具体方法可以查看文档, 包括添加, 删除, 把某个layer的显示层调高或调低等.</p>
+<p>可用<code>layers.addImageryProvider()</code>为<code>layers</code>添加数据源. 这样用可以省去创建<code>imageryLayer</code>的过程, 同时返回的是创建的imageryLayer.</p>
+<p>一个关于imageryLayers的比较完整的示例是sandcastle中的Imagery Layers Manipulation.</p>
 
       
     </div>
@@ -411,7 +412,7 @@
           
             <a href="/tags/web/" rel="tag"># web</a>
           
-            <a href="/tags/webstorm/" rel="tag"># webstorm</a>
+            <a href="/tags/cesium/" rel="tag"># cesium</a>
           
         </div>
       
@@ -439,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/09/关于node-js中的exports-module-exports和export-export-default/" rel="next" title="关于exports和module.exports">
-                <i class="fa fa-chevron-left"></i> 关于exports和module.exports
+              <a href="/2020/02/27/bootstrap-table控件/" rel="next" title="bootstrap table控件">
+                <i class="fa fa-chevron-left"></i> bootstrap table控件
               </a>
             
           </div>
@@ -449,8 +450,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/02/17/thinkjs中的跳转/" rel="prev" title="thinkjs中的a跳转">
-                thinkjs中的a跳转 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/29/Cesium-primitive图元/" rel="prev" title="Cesium-primitive图元">
+                Cesium-primitive图元 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>

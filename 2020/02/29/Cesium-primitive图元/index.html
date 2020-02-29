@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="web,webstorm,">
+  <meta name="keywords" content="web,cesium,">
 
 
 
@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="为了解决eslint一部分报错, 需要将配置一下.eslintrc文件: 123456789101112131415&amp;#123;  &amp;quot;extends&amp;quot;: &amp;quot;think&amp;quot;,  &amp;quot;env&amp;quot;: &amp;#123;    &amp;quot;node&amp;quot;: true,    &amp;quot;browser&amp;quot;: true,    &amp;quot;es6">
-<meta name="keywords" content="web,webstorm">
+<meta name="description" content="primitive可以创建更加灵活的几何体. primitive主要包含两个东西, 一个是GeometryInstance, 另外一个是Appearance.  一个primitive中可以有多个GeometryInstance. 每个GeometryInstance由Geometry控制这个几何体是怎样的种类(box, cylinder之类), 用modelMatrix控制几何体的位置和姿态.">
+<meta name="keywords" content="web,cesium">
 <meta property="og:type" content="article">
-<meta property="og:title" content="webstorm中静态资源文件夹配置以及eslintrc的配置">
-<meta property="og:url" content="http://yoursite.com/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/index.html">
+<meta property="og:title" content="Cesium-primitive图元">
+<meta property="og:url" content="http://yoursite.com/2020/02/29/Cesium-primitive图元/index.html">
 <meta property="og:site_name" content="SaltyFishL&#39;s 个人网站">
-<meta property="og:description" content="为了解决eslint一部分报错, 需要将配置一下.eslintrc文件: 123456789101112131415&amp;#123;  &amp;quot;extends&amp;quot;: &amp;quot;think&amp;quot;,  &amp;quot;env&amp;quot;: &amp;#123;    &amp;quot;node&amp;quot;: true,    &amp;quot;browser&amp;quot;: true,    &amp;quot;es6">
+<meta property="og:description" content="primitive可以创建更加灵活的几何体. primitive主要包含两个东西, 一个是GeometryInstance, 另外一个是Appearance.  一个primitive中可以有多个GeometryInstance. 每个GeometryInstance由Geometry控制这个几何体是怎样的种类(box, cylinder之类), 用modelMatrix控制几何体的位置和姿态.">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-02-15T07:46:57.062Z">
+<meta property="og:updated_time" content="2020-02-29T08:09:40.670Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="webstorm中静态资源文件夹配置以及eslintrc的配置">
-<meta name="twitter:description" content="为了解决eslint一部分报错, 需要将配置一下.eslintrc文件: 123456789101112131415&amp;#123;  &amp;quot;extends&amp;quot;: &amp;quot;think&amp;quot;,  &amp;quot;env&amp;quot;: &amp;#123;    &amp;quot;node&amp;quot;: true,    &amp;quot;browser&amp;quot;: true,    &amp;quot;es6">
+<meta name="twitter:title" content="Cesium-primitive图元">
+<meta name="twitter:description" content="primitive可以创建更加灵活的几何体. primitive主要包含两个东西, 一个是GeometryInstance, 另外一个是Appearance.  一个primitive中可以有多个GeometryInstance. 每个GeometryInstance由Geometry控制这个几何体是怎样的种类(box, cylinder之类), 用modelMatrix控制几何体的位置和姿态.">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/">
+  <link rel="canonical" href="http://yoursite.com/2020/02/29/Cesium-primitive图元/">
 
 
 
 
 
-  <title>webstorm中静态资源文件夹配置以及eslintrc的配置 | SaltyFishL's 个人网站</title>
+  <title>Cesium-primitive图元 | SaltyFishL's 个人网站</title>
   
 
 
@@ -309,7 +309,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/11/webstorm中静态资源文件夹配置以及eslintrc的配置/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/29/Cesium-primitive图元/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Junqi Lu">
@@ -326,7 +326,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">webstorm中静态资源文件夹配置以及eslintrc的配置</h1>
+          <h1 class="post-title" itemprop="name headline">Cesium-primitive图元</h1>
         
 
         <div class="post-meta">
@@ -338,8 +338,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-11T05:19:18+08:00">
-                2020-02-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-29T11:53:24+08:00">
+                2020-02-29
               </time>
             
 
@@ -354,8 +354,8 @@
               
                 <span class="post-meta-item-text">Post modified&#58;</span>
               
-              <time title="Post modified" itemprop="dateModified" datetime="2020-02-15T15:46:57+08:00">
-                2020-02-15
+              <time title="Post modified" itemprop="dateModified" datetime="2020-02-29T16:09:40+08:00">
+                2020-02-29
               </time>
             
           </span>
@@ -388,10 +388,11 @@
       
 
       
-        <p>为了解决eslint一部分报错, 需要将配置一下<code>.eslintrc</code>文件:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;extends&quot;: &quot;think&quot;,</span><br><span class="line">  &quot;env&quot;: &#123;</span><br><span class="line">    &quot;node&quot;: true,</span><br><span class="line">    &quot;browser&quot;: true,</span><br><span class="line">    &quot;es6&quot;: true,</span><br><span class="line">    &quot;jquery&quot;: true</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;rules&quot;: &#123;</span><br><span class="line">    &quot;no-console&quot;: &quot;off&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;globals&quot;: &#123;</span><br><span class="line">    &quot;layui&quot;: true</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>在webstorm中将某个文件夹设为静态资源访问文件夹为, 在webstorm中右键文件夹-&gt;Make directory as-&gt;Resource Root</p>
+        <p>primitive可以创建更加灵活的几何体.</p>
+<p>primitive主要包含两个东西, 一个是GeometryInstance, 另外一个是Appearance. </p>
+<p>一个primitive中可以有多个GeometryInstance. 每个GeometryInstance由Geometry控制这个几何体是怎样的种类(box, cylinder之类), 用modelMatrix控制几何体的位置和姿态. 这样就可以实现, 两个GeometryInstance共用一个Geometry, 但是由不同的modelMatrix控制其出现的位置. 多个GeometryInstance因为同属于一个primitive, 所以可以一笔绘制, 性能上是很快的.</p>
+<p>Appearance指的是物体的表皮. 分为三个部分: Material材质, renderState渲染状态以及materialSupport. </p>
+<p>一个比较完整的例子是sandcastle中的Geometry and Appeances以及Materials</p>
 
       
     </div>
@@ -411,7 +412,7 @@
           
             <a href="/tags/web/" rel="tag"># web</a>
           
-            <a href="/tags/webstorm/" rel="tag"># webstorm</a>
+            <a href="/tags/cesium/" rel="tag"># cesium</a>
           
         </div>
       
@@ -439,8 +440,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/02/09/关于node-js中的exports-module-exports和export-export-default/" rel="next" title="关于exports和module.exports">
-                <i class="fa fa-chevron-left"></i> 关于exports和module.exports
+              <a href="/2020/02/29/Cesium-地形影像加载/" rel="next" title="Cesium-影像加载">
+                <i class="fa fa-chevron-left"></i> Cesium-影像加载
               </a>
             
           </div>
@@ -449,8 +450,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2020/02/17/thinkjs中的跳转/" rel="prev" title="thinkjs中的a跳转">
-                thinkjs中的a跳转 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/29/卫星模块分工/" rel="prev" title="卫星模块分工">
+                卫星模块分工 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
